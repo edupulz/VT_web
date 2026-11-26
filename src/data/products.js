@@ -1,5 +1,5 @@
 import schoolErpImg from '../assets/images/product-school-erp.jpg';
-import epoojaImg from '../assets/images/product-epooja.jpg';
+import epoojaImg from '../assets/images/product-epooja.png';
 import einvoiceImg from '../assets/images/product-einvoice.jpg';
 import loadTrackerImg from '../assets/images/product-load-tracker.jpg';
 import jobPortalImg from '../assets/images/product-job-portal.jpg';
