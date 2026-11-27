@@ -18,6 +18,7 @@ import {
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
 import PageHeroImage from '../components/PageHeroImage';
+import SplitHeading from '../components/SplitHeading';
 import ActionButton from '../components/ActionButton';
 import ProcessSection from '../components/sections/ProcessSection';
 import CtaSection from '../components/sections/CtaSection';
@@ -177,7 +178,7 @@ export default function MobileAppDevelopmentPage() {
             <div className="lg:col-span-7 space-y-6">
               <p className="eyebrow-label">MOBILE APP DEVELOPMENT</p>
               <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
-                Turn Ideas Into Powerful Mobile Experiences.
+                <SplitHeading text="Turn Ideas Into Powerful Mobile Experiences." highlightLastWord />
               </h1>
               <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
                 Connect your business with customers through intuitive, high-performing mobile
@@ -208,7 +209,7 @@ export default function MobileAppDevelopmentPage() {
           <div className="max-w-2xl mb-14">
             <p className="eyebrow-label mb-3">Services Overview</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              Mobile Applications Built Around Your Goals.
+              <SplitHeading text="Mobile Applications Built Around Your Goals." />
             </h2>
             <p className="mt-4 text-base text-[#667085] leading-relaxed">
               Whether you&apos;re launching a new product or extending your digital platform, we
@@ -247,7 +248,7 @@ export default function MobileAppDevelopmentPage() {
           <div className="max-w-2xl mb-12">
             <p className="eyebrow-label mb-3">Our Capabilities</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              From Interface Design to App Deployment.
+              <SplitHeading text="From Interface Design to App Deployment." />
             </h2>
             <p className="mt-4 text-base text-[#667085] leading-relaxed">
               We bring together mobile technologies and essential application components to create
@@ -297,7 +298,7 @@ export default function MobileAppDevelopmentPage() {
               <div>
                 <p className="eyebrow-label mb-3">Why Choose Us?</p>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-                  Better Mobile Experiences. Stronger Customer Connections.
+                  <SplitHeading text="Better Mobile Experiences. Stronger Customer Connections." />
                 </h2>
               </div>
 
@@ -415,7 +416,7 @@ export default function MobileAppDevelopmentPage() {
           <div className="text-center mb-12">
             <p className="eyebrow-label mb-3">FAQs</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              Frequently Asked Questions
+              <SplitHeading text="Frequently Asked Questions" />
             </h2>
           </div>
 

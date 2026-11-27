@@ -4,6 +4,7 @@ import { CheckCircle2, ChevronDown } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
 import PageHeroImage from '../components/PageHeroImage';
+import SplitHeading from '../components/SplitHeading';
 import Icon from '../components/Icon';
 import ActionButton from '../components/ActionButton';
 import { PRODUCT_PAGES } from '../data/productPages';
@@ -46,7 +47,7 @@ export default function ProductDetailPage() {
             <div className="lg:col-span-7 space-y-6">
               <p className="eyebrow-label">{page.eyebrow}</p>
               <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
-                {page.hero.headline}
+                <SplitHeading text={page.hero.headline} highlightLastWord />
               </h1>
               <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
                 {page.hero.description}
@@ -72,7 +73,7 @@ export default function ProductDetailPage() {
           <div className="max-w-3xl mb-14">
             <p className="eyebrow-label mb-3">Product Overview</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              {page.overview.heading}
+              <SplitHeading text={page.overview.heading} />
             </h2>
             {page.overview.paragraphs.map((paragraph) => (
               <p key={paragraph} className="mt-4 text-base text-[#667085] leading-relaxed">
@@ -108,7 +109,7 @@ export default function ProductDetailPage() {
           <div className="max-w-2xl mb-14">
             <p className="eyebrow-label mb-3">Key Modules &amp; Features</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              {page.modules.heading}
+              <SplitHeading text={page.modules.heading} />
             </h2>
             <p className="mt-4 text-base text-[#667085] leading-relaxed">
               {page.modules.description}
@@ -180,7 +181,7 @@ export default function ProductDetailPage() {
           <div className="max-w-2xl mb-14">
             <p className="eyebrow-label mb-3">Product Benefits</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              {page.benefits.heading}
+              <SplitHeading text={page.benefits.heading} />
             </h2>
             <p className="mt-4 text-base text-[#667085] leading-relaxed">
               {page.benefits.description}
@@ -229,7 +230,7 @@ export default function ProductDetailPage() {
               <div>
                 <p className="eyebrow-label mb-3">{page.whyChoose.eyebrow}</p>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-                  {page.whyChoose.heading}
+                  <SplitHeading text={page.whyChoose.heading} />
                 </h2>
                 <p className="mt-4 text-base text-[#667085] leading-relaxed">
                   {page.whyChoose.description}
@@ -266,7 +267,7 @@ export default function ProductDetailPage() {
           <div className="text-center mb-12">
             <p className="eyebrow-label mb-3">FAQs</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              {page.faqs.heading}
+              <SplitHeading text={page.faqs.heading} />
             </h2>
           </div>
 
@@ -308,7 +309,7 @@ export default function ProductDetailPage() {
         <div className="max-w-4xl mx-auto px-5 sm:px-8 text-center">
           <p className="eyebrow-label mb-4">Get Started</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] text-[#101828]">
-            {page.cta.headline}
+            <SplitHeading text={page.cta.headline} highlightLastWord />
           </h2>
           <p className="mt-5 text-base sm:text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
             {page.cta.description}

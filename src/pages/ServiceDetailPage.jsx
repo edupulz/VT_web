@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
 import PageHeroImage from '../components/PageHeroImage';
+import SplitHeading from '../components/SplitHeading';
 import { SERVICES } from '../data/services';
 import { SERVICE_PAGES } from '../data/servicePages';
 import Icon from '../components/Icon';
@@ -46,7 +47,7 @@ export default function ServiceDetailPage() {
             <div className="lg:col-span-7 space-y-6">
               <p className="eyebrow-label">{page.eyebrow}</p>
               <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
-                {page.hero.headline}
+                <SplitHeading text={page.hero.headline} highlightLastWord />
               </h1>
               <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
                 {page.hero.description}
@@ -72,7 +73,7 @@ export default function ServiceDetailPage() {
           <div className="max-w-2xl mb-14">
             <p className="eyebrow-label mb-3">Services Overview</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              {page.overview.heading}
+              <SplitHeading text={page.overview.heading} />
             </h2>
             <p className="mt-4 text-base text-[#667085] leading-relaxed">
               {page.overview.description}
@@ -104,7 +105,7 @@ export default function ServiceDetailPage() {
           <div className="max-w-2xl mb-12">
             <p className="eyebrow-label mb-3">Our Capabilities</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              {page.expertise.heading}
+              <SplitHeading text={page.expertise.heading} />
             </h2>
             {page.expertise.description && (
               <p className="mt-4 text-base text-[#101828] leading-relaxed">
@@ -152,7 +153,7 @@ export default function ServiceDetailPage() {
               <div>
                 <p className="eyebrow-label mb-3">Why Choose Us?</p>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-                  {page.whyChoose.heading}
+                  <SplitHeading text={page.whyChoose.heading} />
                 </h2>
               </div>
 
@@ -189,7 +190,7 @@ export default function ServiceDetailPage() {
           <div className="max-w-2xl mb-14">
             <p className="eyebrow-label mb-3">Featured Projects</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              {page.projects.heading}
+              <SplitHeading text={page.projects.heading} />
             </h2>
             <p className="mt-4 text-base text-[#667085] leading-relaxed">
               {page.projects.description}
@@ -278,7 +279,7 @@ export default function ServiceDetailPage() {
           <div className="text-center mb-12">
             <p className="eyebrow-label mb-3">FAQs</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              Frequently Asked Questions
+              <SplitHeading text="Frequently Asked Questions" />
             </h2>
           </div>
 
@@ -321,7 +322,7 @@ export default function ServiceDetailPage() {
           <div className="max-w-4xl mx-auto px-5 sm:px-8 text-center">
             <p className="eyebrow-label mb-4">Start Your Next Initiative</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] text-[#101828]">
-              {page.customCta.headline}
+              <SplitHeading text={page.customCta.headline} highlightLastWord />
             </h2>
             <p className="mt-5 text-base sm:text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
               {page.customCta.description}
