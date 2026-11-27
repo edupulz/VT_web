@@ -51,7 +51,7 @@ export default function ProductsPage() {
               return (
                 <Link
                   key={product.slug}
-                  to="/contact"
+                  to={product.to || '/contact'}
                   className={`group relative flex flex-col justify-end rounded-none bg-[#101828] border border-[#E4E7EC] hover:border-[#2563EB]/60 overflow-hidden shadow-[0_8px_28px_rgba(16,24,40,0.08)] transition-[border-color,box-shadow] duration-300 min-h-[260px] ${spanClass}`}
                 >
                   <img

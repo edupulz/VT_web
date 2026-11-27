@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function PageHead({ title, description }) {
+export default function PageHead({ title, description, keywords }) {
   useEffect(() => {
     if (title) {
       document.title = title;
@@ -11,7 +11,16 @@ export default function PageHead({ title, description }) {
         meta.setAttribute('content', description);
       }
     }
-  }, [title, description]);
+    if (keywords) {
+      let meta = document.querySelector('meta[name="keywords"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', 'keywords');
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', keywords);
+    }
+  }, [title, description, keywords]);
 
   return null;
 }

@@ -8,7 +8,9 @@ import ServicesPage from './pages/ServicesPage';
 import MobileAppDevelopmentPage from './pages/MobileAppDevelopmentPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import ProductsPage from './pages/ProductsPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 import IndustriesPage from './pages/IndustriesPage';
+import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import LegalPage from './pages/LegalPage';
 
@@ -29,7 +31,9 @@ export default function App() {
             />
             <Route path="/services/:slug" element={<ServiceDetailPage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products/:slug" element={<ProductDetailPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<LegalPage type="privacy" />} />
             <Route path="/terms" element={<LegalPage type="terms" />} />

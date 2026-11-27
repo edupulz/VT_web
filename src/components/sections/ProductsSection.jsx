@@ -105,7 +105,7 @@ export default function ProductsSection() {
                 ref={(el) => {
                   cardRefs.current[index] = el;
                 }}
-                to="/contact"
+                to={product.to || '/contact'}
                 className="group relative w-[460px] lg:w-[540px] h-[300px] lg:h-[330px] shrink-0 flex flex-col justify-end rounded-none bg-[#101828] border border-[#E4E7EC] hover:border-[#2563EB]/60 overflow-hidden shadow-[0_8px_28px_rgba(16,24,40,0.08)] transition-[border-color,box-shadow] duration-300"
               >
                 <img
@@ -148,7 +148,7 @@ export default function ProductsSection() {
             {PRODUCTS.map((product) => (
               <Link
                 key={product.slug}
-                to="/contact"
+                to={product.to || '/contact'}
                 className="group relative w-full shrink-0 h-[260px] flex flex-col justify-end rounded-none bg-[#101828] border border-[#E4E7EC] overflow-hidden"
               >
                 <img

@@ -103,3 +103,20 @@
   stroke-dashoffset: 163.4;
   animation: process-ring-fill 2.8s linear forwards;
 }
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5.5s ease-in-out infinite;
+}
+
+.animate-float-gentle-delayed {
+  animation: float-gentle 6.5s ease-in-out 1.2s infinite;
+}

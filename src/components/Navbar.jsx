@@ -24,7 +24,7 @@ const NAV_LINKS = [
     to: '/products',
     dropdown: PRODUCTS.map((p) => ({
       label: p.title,
-      to: '/products',
+      to: p.to || '/products',
     })),
     viewAllLabel: 'All Products',
   },
