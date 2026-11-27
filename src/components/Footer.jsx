@@ -12,12 +12,42 @@ import youtubeIcon from '../assets/Icon/youtube.png';
 const CURRENT_YEAR = new Date().getFullYear();
 
 const SOCIAL_LINKS = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com', icon: linkedinIcon },
-  { name: 'Instagram', href: 'https://www.instagram.com', icon: instagramIcon },
-  { name: 'Facebook', href: 'https://www.facebook.com', icon: facebookIcon },
-  { name: 'X (Twitter)', href: 'https://x.com', icon: twitterIcon, whiteBg: true },
-  { name: 'Threads', href: 'https://www.threads.net', icon: threadsIcon },
-  { name: 'YouTube', href: 'https://www.youtube.com', icon: youtubeIcon },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/vijayantech/',
+    icon: linkedinIcon,
+    hoverClass: 'hover:bg-[#0A66C2]/20 hover:border-[#0A66C2]',
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com',
+    icon: instagramIcon,
+    hoverClass: 'hover:bg-[#E1306C]/20 hover:border-[#E1306C]',
+  },
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com',
+    icon: facebookIcon,
+    hoverClass: 'hover:bg-[#1877F2]/20 hover:border-[#1877F2]',
+  },
+  {
+    name: 'X (Twitter)',
+    href: 'https://x.com',
+    icon: twitterIcon,
+    hoverClass: 'hover:bg-white/25 hover:border-white',
+  },
+  {
+    name: 'Threads',
+    href: 'https://www.threads.net',
+    icon: threadsIcon,
+    hoverClass: 'hover:bg-[#2563EB]/20 hover:border-[#2563EB]',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@vijayantech16',
+    icon: youtubeIcon,
+    hoverClass: 'hover:bg-[#FF0000]/20 hover:border-[#FF0000]',
+  },
 ];
 
 export default function Footer() {
@@ -35,7 +65,7 @@ export default function Footer() {
               Engineering intelligent digital platforms, resilient cloud infrastructure, and
               enterprise software for organizations shaping what comes next.
             </p>
-            <div className="flex flex-wrap items-center gap-4 pt-1">
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               {SOCIAL_LINKS.map((social) => (
                 <a
                   key={social.name}
@@ -44,14 +74,12 @@ export default function Footer() {
                   rel="noreferrer"
                   aria-label={social.name}
                   title={social.name}
-                  className={`inline-flex items-center justify-center transition-transform duration-200 hover:scale-110 ${
-                    social.whiteBg ? 'w-6 h-6 rounded-md bg-white p-1' : ''
-                  }`}
+                  className={`group inline-flex items-center justify-center w-9 h-9 rounded-lg bg-[#1E293B] border border-slate-700 p-1.5 transition-all duration-200 hover:-translate-y-0.5 ${social.hoverClass}`}
                 >
                   <img
                     src={social.icon}
                     alt={social.name}
-                    className={social.whiteBg ? 'w-full h-full object-contain' : 'w-6 h-6 object-contain'}
+                    className="w-full h-full object-contain rounded-[4px] grayscale opacity-80 transition-all duration-200 group-hover:grayscale-0 group-hover:opacity-100"
                   />
                 </a>
               ))}
