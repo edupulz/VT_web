@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { PROCESS_STEPS } from '../../data/company';
 import { gsap, isMobileViewport, prefersReducedMotion } from '../../utils/gsap';
 
@@ -66,7 +66,7 @@ export default function ProcessSection() {
         <div className="max-w-2xl mb-16">
           <p className="eyebrow-label mb-3">Our Approach</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.14] text-[#101828]">
-            From Vision <span className="text-[#101828]">to Value.</span>
+            From Vision <span className="text-[#667085]">to Value.</span>
           </h2>
         </div>
 
@@ -166,7 +166,7 @@ export default function ProcessSection() {
                   </h3>
                   <p
                     className={`text-sm leading-relaxed transition-colors duration-300 ${
-                      isActive ? 'text-[#101828]' : 'text-[#101828]'
+                      isActive ? 'text-[#344054]' : 'text-[#667085]'
                     }`}
                   >
                     {step.description}

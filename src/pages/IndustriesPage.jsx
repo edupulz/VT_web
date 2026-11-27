@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
@@ -19,11 +19,11 @@ export default function IndustriesPage() {
             <p className="eyebrow-label mb-4">Industries</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
               Domain Precision{' '}
-              <span className="text-[#101828]">
+              <span className="text-[#667085]">
                 Across Global <span className="text-[#101828]">Sectors.</span>
               </span>
             </h1>
-            <p className="mt-6 text-lg text-[#101828] leading-relaxed">
+            <p className="mt-6 text-lg text-[#667085] leading-relaxed">
               We pair deep architectural engineering with regulatory, operational, and customer
               context across five core industries.
             </p>
@@ -62,7 +62,7 @@ export default function IndustriesPage() {
                 <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#101828]">
                   {industry.name}
                 </h2>
-                <p className="text-base sm:text-lg text-[#101828] leading-relaxed">
+                <p className="text-base sm:text-lg text-[#667085] leading-relaxed">
                   {industry.description}
                 </p>
                 <div className="pt-2">

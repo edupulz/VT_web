@@ -1,4 +1,4 @@
-﻿import { Compass, Eye, HeartHandshake, Target } from 'lucide-react';
+import { Compass, Eye, HeartHandshake, Target } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
 import ProcessSection from '../components/sections/ProcessSection';
@@ -84,11 +84,11 @@ export default function AboutPage() {
             <p className="eyebrow-label mb-4">About Vijayan Tech</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
               Innovating Digital Futures.{' '}
-              <span className="text-[#101828]">
+              <span className="text-[#667085]">
                 Empowering <span className="text-[#101828]">Growing Businesses.</span>
               </span>
             </h1>
-            <p className="mt-6 text-lg text-[#101828] leading-relaxed">
+            <p className="mt-6 text-lg text-[#667085] leading-relaxed">
               Vijayan Tech builds custom websites, mobile applications, ERP systems, and cloud
               solutions designed for lasting business impact.
             </p>
@@ -104,14 +104,14 @@ export default function AboutPage() {
               <p className="eyebrow-label">Company Overview</p>
               <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight leading-[1.15] text-[#101828]">
                 Turning Bold Ideas into{' '}
-                <span className="text-[#101828]">Dependable Digital Products.</span>
+                <span className="text-[#667085]">Dependable Digital Products.</span>
               </h2>
-              <p className="text-base sm:text-lg text-[#101828] leading-relaxed">
+              <p className="text-base sm:text-lg text-[#475467] leading-relaxed">
                 Vijayan Tech is a full-cycle software and digital engineering studio helping
                 businesses modernize operations, launch standout products, and scale with
                 confidence.
               </p>
-              <p className="text-base text-[#101828] leading-relaxed">
+              <p className="text-base text-[#667085] leading-relaxed">
                 Whether it&apos;s a high-converting web platform, a cross-platform mobile app, a
                 custom ERP, or cloud-native automation, our multidisciplinary team blends clean
                 design with rock-solid engineering—so every release is fast, secure, and built for
@@ -125,7 +125,7 @@ export default function AboutPage() {
                       {stat.value}
                       {stat.suffix}
                     </div>
-                    <p className="mt-1 text-xs sm:text-sm text-[#101828]">{stat.label}</p>
+                    <p className="mt-1 text-xs sm:text-sm text-[#667085]">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -154,7 +154,7 @@ export default function AboutPage() {
             <p className="eyebrow-label mb-3">Mission, Vision &amp; Values</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               Guided by Purpose.{' '}
-              <span className="text-[#101828]">Driven by Outcomes.</span>
+              <span className="text-[#667085]">Driven by Outcomes.</span>
             </h2>
           </div>
 
@@ -218,7 +218,7 @@ export default function AboutPage() {
                 <p className="eyebrow-label mb-3">Our Story &amp; Journey</p>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
                   From Regional Roots{' '}
-                  <span className="text-[#101828]">to Full-Stack Impact.</span>
+                  <span className="text-[#667085]">to Full-Stack Impact.</span>
                 </h2>
               </div>
 
@@ -235,7 +235,7 @@ export default function AboutPage() {
                     <h3 className="mt-1 font-display text-lg font-bold text-[#101828]">
                       {item.title}
                     </h3>
-                    <p className="mt-1.5 text-sm text-[#101828] leading-relaxed">
+                    <p className="mt-1.5 text-sm text-[#667085] leading-relaxed">
                       {item.description}
                     </p>
                   </div>

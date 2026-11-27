@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowUpRight,
@@ -54,9 +54,9 @@ function FloatingInput({ id, type = 'text', label, required = false, value, onCh
         className={`pointer-events-none absolute transition-all duration-200 ${
           isFloating
             ? `-top-2.5 left-3.5 px-1.5 bg-white text-xs font-medium ${
-                focused ? 'text-[#2563EB]' : 'text-[#101828]'
+                focused ? 'text-[#2563EB]' : 'text-[#475467]'
               }`
-            : 'top-3.5 left-4 text-sm text-[#101828]/80'
+            : 'top-3.5 left-4 text-sm text-[#667085]/80'
         }`}
       >
         {label}
@@ -96,9 +96,9 @@ function FloatingSelect({ id, label, required = false, value, onChange, options 
         className={`pointer-events-none absolute transition-all duration-200 ${
           isFloating
             ? `-top-2.5 left-3.5 px-1.5 bg-white text-xs font-medium ${
-                focused ? 'text-[#2563EB]' : 'text-[#101828]'
+                focused ? 'text-[#2563EB]' : 'text-[#475467]'
               }`
-            : 'top-3.5 left-4 text-sm text-[#101828]/80'
+            : 'top-3.5 left-4 text-sm text-[#667085]/80'
         }`}
       >
         {label}
@@ -135,7 +135,7 @@ export default function ContactPage() {
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
               Let&apos;s Start a Conversation.
             </h1>
-            <p className="mt-6 text-lg text-[#101828] leading-relaxed">
+            <p className="mt-6 text-lg text-[#667085] leading-relaxed">
               Have an idea, a project, or a challenge to solve? We&apos;d love to hear from you.
               Get in touch with our team and let&apos;s create something innovative together.
             </p>
@@ -157,7 +157,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-2">
                     <h2 className="font-display text-lg font-bold text-[#101828]">Head Office</h2>
-                    <p className="text-sm text-[#101828] leading-relaxed">
+                    <p className="text-sm text-[#667085] leading-relaxed">
                       3/190, Vaipadi Road, Vijayamanagalam,
                       <br />
                       Erode – 638056,
@@ -197,7 +197,7 @@ export default function ContactPage() {
                         TBI @ KEC
                       </span>
                     </div>
-                    <p className="text-sm text-[#101828] leading-relaxed">
+                    <p className="text-sm text-[#667085] leading-relaxed">
                       Kongu Engineering College Campus,
                       <br />
                       Perundurai – 638 060,
@@ -233,7 +233,7 @@ export default function ContactPage() {
                       <h3 className="font-display text-sm font-bold text-[#101828]">Email Us</h3>
                       <a
                         href="mailto:sales@vijayantech.com"
-                        className="mt-1 block text-sm font-semibold text-[#2563EB] hover:text-[#1D4ED8] truncate"
+                        className="mt-1 block text-sm font-semibold text-[#101828] hover:text-[#2563EB] truncate"
                       >
                         sales@vijayantech.com
                       </a>
@@ -277,7 +277,7 @@ export default function ContactPage() {
                     <h2 className="font-display text-2xl font-bold text-[#101828]">
                       Inquiry Received
                     </h2>
-                    <p className="text-sm sm:text-base text-[#101828] max-w-md mx-auto">
+                    <p className="text-sm sm:text-base text-[#667085] max-w-md mx-auto">
                       Thank you, {formData.name || 'partner'}. Our team will review your project
                       details and get in touch within 24 hours.
                     </p>
@@ -298,7 +298,7 @@ export default function ContactPage() {
                       <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#101828]">
                         Let&apos;s Talk About Your Project
                       </h2>
-                      <p className="mt-2 text-sm sm:text-base text-[#101828]">
+                      <p className="mt-2 text-sm sm:text-base text-[#667085]">
                         Tell us a little about your project. Our team will get in touch with you.
                       </p>
                     </div>
@@ -373,16 +373,16 @@ export default function ContactPage() {
                               ? 'Tell us about your project, requirements, and goals...'
                               : ' '
                           }
-                          className="w-full px-4 py-3.5 rounded-xl bg-white border border-[#E4E7EC] text-sm text-[#101828] placeholder:text-[#101828]/60 focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/15 resize-none transition-colors"
+                          className="w-full px-4 py-3.5 rounded-xl bg-white border border-[#E4E7EC] text-sm text-[#101828] placeholder:text-[#667085]/60 focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/15 resize-none transition-colors"
                         />
                         <label
                           htmlFor="message"
                           className={`pointer-events-none absolute transition-all duration-200 ${
                             isMessageFloating
                               ? `-top-2.5 left-3.5 px-1.5 bg-white text-xs font-medium ${
-                                  messageFocused ? 'text-[#2563EB]' : 'text-[#101828]'
+                                  messageFocused ? 'text-[#2563EB]' : 'text-[#475467]'
                                 }`
-                              : 'top-3.5 left-4 text-sm text-[#101828]/80'
+                              : 'top-3.5 left-4 text-sm text-[#667085]/80'
                           }`}
                         >
                           {isMessageFloating
@@ -391,7 +391,7 @@ export default function ContactPage() {
                         </label>
                       </div>
 
-                      <div className="flex items-start gap-2 text-xs text-[#101828] pt-1 leading-relaxed">
+                      <div className="flex items-start gap-2 text-xs text-[#667085] pt-1 leading-relaxed">
                         <ShieldCheck
                           className="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5"
                           aria-hidden="true"

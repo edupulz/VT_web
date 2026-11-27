@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Logo from './Logo';
@@ -111,7 +111,7 @@ export default function Navbar() {
                     className={({ isActive }) => {
                       const active = isItemActive(item.to, isActive);
                       return `relative text-[18px] font-medium transition-colors duration-200 py-1 ${
-                        active ? 'text-[#101828]' : 'text-[#101828] hover:text-[#101828]'
+                        active ? 'text-[#101828]' : 'text-[#667085] hover:text-[#101828]'
                       }`;
                     }}
                   >
@@ -150,7 +150,7 @@ export default function Navbar() {
                       return `relative inline-flex items-center gap-1 text-[18px] font-medium transition-colors duration-200 py-2 ${
                         active || isOpen
                           ? 'text-[#101828]'
-                          : 'text-[#101828] hover:text-[#101828]'
+                          : 'text-[#667085] hover:text-[#101828]'
                       }`;
                     }}
                   >
@@ -189,7 +189,7 @@ export default function Navbar() {
                           key={sub.label}
                           to={sub.to}
                           onClick={() => setOpenDropdown(null)}
-                          className="block px-4 py-2 text-sm font-medium text-[#101828] hover:text-[#2563EB] hover:bg-[#F7F9FC] transition-colors"
+                          className="block px-4 py-2 text-sm font-medium text-[#475467] hover:text-[#2563EB] hover:bg-[#F7F9FC] transition-colors"
                         >
                           {sub.label}
                         </Link>
@@ -249,7 +249,7 @@ export default function Navbar() {
                       return `px-3 py-2.5 rounded-none text-lg font-medium transition-colors ${
                         active
                           ? 'bg-[#EAF2FF] text-[#2563EB]'
-                          : 'text-[#101828] hover:bg-[#F7F9FC] hover:text-[#101828]'
+                          : 'text-[#667085] hover:bg-[#F7F9FC] hover:text-[#101828]'
                       }`;
                     }}
                   >
@@ -270,7 +270,7 @@ export default function Navbar() {
                         return `flex-1 px-3 py-2.5 rounded-none text-lg font-medium transition-colors ${
                           active
                             ? 'bg-[#EAF2FF] text-[#2563EB]'
-                            : 'text-[#101828] hover:bg-[#F7F9FC] hover:text-[#101828]'
+                            : 'text-[#667085] hover:bg-[#F7F9FC] hover:text-[#101828]'
                         }`;
                       }}
                     >
@@ -283,7 +283,7 @@ export default function Navbar() {
                       }
                       aria-expanded={isExpanded}
                       aria-label={`Toggle ${item.label} submenu`}
-                      className="p-2.5 rounded-none text-[#101828] hover:text-[#101828] hover:bg-[#F7F9FC] transition-colors"
+                      className="p-2.5 rounded-none text-[#667085] hover:text-[#101828] hover:bg-[#F7F9FC] transition-colors"
                     >
                       <ChevronDown
                         className={`w-4 h-4 transition-transform duration-200 ${
@@ -300,7 +300,7 @@ export default function Navbar() {
                           key={sub.label}
                           to={sub.to}
                           onClick={() => setMobileOpen(false)}
-                          className="block px-3 py-2 rounded-none text-sm font-medium text-[#101828] hover:text-[#2563EB] hover:bg-[#F7F9FC] transition-colors"
+                          className="block px-3 py-2 rounded-none text-sm font-medium text-[#667085] hover:text-[#2563EB] hover:bg-[#F7F9FC] transition-colors"
                         >
                           {sub.label}
                         </Link>

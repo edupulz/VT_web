@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react';
 import PageHead from '../components/PageHead';
@@ -24,7 +24,7 @@ export default function ServiceDetailPage() {
         <h1 className="font-display text-3xl font-bold text-[#101828] mb-4">
           Service Not Found
         </h1>
-        <p className="text-[#101828] mb-8">
+        <p className="text-[#667085] mb-8">
           The requested capability could not be found. Explore our full suite of services below.
         </p>
         <ActionButton to="/services" arrow="left" className="px-6 py-3 text-sm">
@@ -48,7 +48,7 @@ export default function ServiceDetailPage() {
               <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
                 {page.hero.headline}
               </h1>
-              <p className="text-base sm:text-lg text-[#101828] leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
                 {page.hero.description}
               </p>
 
@@ -74,7 +74,7 @@ export default function ServiceDetailPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               {page.overview.heading}
             </h2>
-            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+            <p className="mt-4 text-base text-[#667085] leading-relaxed">
               {page.overview.description}
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function ServiceDetailPage() {
                   <Icon name={item.iconName} className="w-5 h-5" />
                 </div>
                 <h3 className="font-display text-xl font-semibold text-[#101828]">{item.title}</h3>
-                <p className="text-sm sm:text-[15px] text-[#101828] leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-[#667085] leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -168,7 +168,7 @@ export default function ServiceDetailPage() {
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-[#101828] leading-relaxed">{item.description}</p>
+                    <p className="text-sm text-[#667085] leading-relaxed">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -191,7 +191,7 @@ export default function ServiceDetailPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               {page.projects.heading}
             </h2>
-            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+            <p className="mt-4 text-base text-[#667085] leading-relaxed">
               {page.projects.description}
             </p>
           </div>
@@ -237,7 +237,7 @@ export default function ServiceDetailPage() {
 
                     <div className="space-y-2">
                       {project.details.map((detail) => (
-                        <p key={detail.label} className="text-sm text-[#101828] leading-relaxed">
+                        <p key={detail.label} className="text-sm text-[#667085] leading-relaxed">
                           <span className="font-semibold text-[#101828]">{detail.label}: </span>
                           {detail.text}
                         </p>
@@ -248,7 +248,7 @@ export default function ServiceDetailPage() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 text-xs font-medium bg-[#F8FAFC] border border-[#E4E7EC] text-[#101828]"
+                          className="px-2.5 py-1 text-xs font-medium bg-[#F8FAFC] border border-[#E4E7EC] text-[#475467]"
                         >
                           {tech}
                         </span>
@@ -297,14 +297,14 @@ export default function ServiceDetailPage() {
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#101828] shrink-0 transition-transform duration-200 ${
+                      className={`w-5 h-5 text-[#667085] shrink-0 transition-transform duration-200 ${
                         isOpen ? 'rotate-180 text-[#2563EB]' : ''
                       }`}
                       aria-hidden="true"
                     />
                   </button>
                   {isOpen && (
-                    <p className="pb-5 text-sm sm:text-base text-[#101828] leading-relaxed">
+                    <p className="pb-5 text-sm sm:text-base text-[#667085] leading-relaxed">
                       {faq.answer}
                     </p>
                   )}
@@ -323,7 +323,7 @@ export default function ServiceDetailPage() {
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] text-[#101828]">
               {page.customCta.headline}
             </h2>
-            <p className="mt-5 text-base sm:text-lg text-[#101828] max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-5 text-base sm:text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
               {page.customCta.description}
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -346,11 +346,11 @@ export default function ServiceDetailPage() {
             <p className="eyebrow-label mb-4">Start Your Next Initiative</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] text-[#101828]">
               Have an Idea?
-              <span className="block mt-1 text-[#101828]">
+              <span className="block mt-1 text-[#667085]">
                 Let&apos;s Build It <span className="text-[#101828]">Together.</span>
               </span>
             </h2>
-            <p className="mt-5 text-base sm:text-lg text-[#101828] max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-5 text-base sm:text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
               Let&apos;s build something extraordinary together with technology that drives your
               business forward.
             </p>

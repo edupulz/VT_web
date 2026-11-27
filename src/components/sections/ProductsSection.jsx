@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { PRODUCTS } from '../../data/products';
@@ -60,7 +60,7 @@ export default function ProductsSection() {
             <p className="eyebrow-label mb-3">Our Products</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.14] text-[#101828]">
               Enterprise Platforms.{' '}
-              <span className="text-[#101828]">
+              <span className="text-[#667085]">
                 Built to <span className="text-[#101828]">Scale.</span>
               </span>
             </h2>
@@ -68,7 +68,7 @@ export default function ProductsSection() {
 
           {/* Right Top Controls: Counter + Back & Front Arrows (Desktop & Mobile) */}
           <div className="flex items-center gap-3 shrink-0 ml-auto">
-            <span className="font-display text-sm font-semibold tracking-wider text-[#101828] mr-1">
+            <span className="font-display text-sm font-semibold tracking-wider text-[#667085] mr-1">
               <span className="text-[#101828]">{formattedIndex}</span> / {formattedTotal}
             </span>
 

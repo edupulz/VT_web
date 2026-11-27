@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ExternalLink } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
@@ -61,11 +61,11 @@ export default function PortfolioPage() {
             <p className="eyebrow-label mb-4">Our Portfolio</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
               Recent Projects.{' '}
-              <span className="text-[#101828]">
+              <span className="text-[#667085]">
                 Delivered with <span className="text-[#101828]">Precision.</span>
               </span>
             </h1>
-            <p className="mt-6 text-lg text-[#101828] leading-relaxed">
+            <p className="mt-6 text-lg text-[#667085] leading-relaxed">
               A selection of recent digital platforms, corporate websites, and e-commerce
               experiences engineered for clients across manufacturing, education, energy, retail,
               and agriculture.
@@ -180,7 +180,7 @@ export default function PortfolioPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               Recent CMS/Website Development
             </h2>
-            <p className="mt-3 text-base text-[#101828] leading-relaxed">
+            <p className="mt-3 text-base text-[#667085] leading-relaxed">
               Explore custom-designed corporate websites, CMS platforms, and digital storefronts
               built for growing businesses across diverse industries.
             </p>

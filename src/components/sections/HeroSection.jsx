@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ActionButton from '../ActionButton';
 import { gsap, prefersReducedMotion } from '../../utils/gsap';
@@ -97,14 +97,14 @@ export default function HeroSection() {
             className="font-display text-4xl sm:text-5xl lg:text-[4rem] font-bold tracking-tight leading-[1.08] text-[#101828]"
           >
             <span className="block">Creating Digital Solutions</span>
-            <span className="block mt-1 text-[#101828]">
+            <span className="block mt-1 text-[#667085]">
               That Move You <span className="text-[#101828]">Forward.</span>
             </span>
           </h1>
 
           <p
             ref={descRef}
-            className="mt-7 text-lg sm:text-xl text-[#101828] leading-relaxed max-w-2xl"
+            className="mt-7 text-lg sm:text-xl text-[#475467] leading-relaxed max-w-2xl"
           >
             We transform ambitious ideas into intelligent digital solutions through innovative
             engineering, scalable technology, and meaningful experiences.

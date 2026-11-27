@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
@@ -30,11 +30,11 @@ export default function ProductsPage() {
             <p className="eyebrow-label mb-4">Our Products</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
               Enterprise Platforms.{' '}
-              <span className="text-[#101828]">
+              <span className="text-[#667085]">
                 Built to <span className="text-[#101828]">Scale.</span>
               </span>
             </h1>
-            <p className="mt-6 text-lg text-[#101828] leading-relaxed">
+            <p className="mt-6 text-lg text-[#667085] leading-relaxed">
               Purpose-built software products engineered for education, retail, logistics,
               fitness, and enterprise operations.
             </p>

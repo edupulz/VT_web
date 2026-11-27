@@ -1,9 +1,9 @@
-﻿import PageHead from '../components/PageHead';
+import PageHead from '../components/PageHead';
 import ActionButton from '../components/ActionButton';
 
 function TermsContent() {
   return (
-    <div className="space-y-8 text-sm sm:text-base text-[#101828] leading-relaxed">
+    <div className="space-y-8 text-sm sm:text-base text-[#475467] leading-relaxed">
       <p>
         These Terms and Conditions (&ldquo;Terms&rdquo;) constitute a legally binding agreement
         between you, the Client, and Vijayan Tech (&ldquo;Company,&rdquo; &ldquo;we,&rdquo;
@@ -168,7 +168,7 @@ function TermsContent() {
 
 function PrivacyContent() {
   return (
-    <div className="space-y-8 text-sm sm:text-base text-[#101828] leading-relaxed">
+    <div className="space-y-8 text-sm sm:text-base text-[#475467] leading-relaxed">
       <p>
         Your privacy is important to us. It is Vijayan Tech&apos;s policy to respect your privacy
         and comply with any applicable law and regulation regarding any personal information we may
@@ -450,7 +450,7 @@ export default function LegalPage({ type = 'privacy' }) {
         <div className="max-w-3xl mx-auto px-5 sm:px-8 space-y-6">
           <p className="eyebrow-label">Legal</p>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#101828]">{title}</h1>
-          <p className="text-sm text-[#101828] pb-4 border-b border-[#E4E7EC]">
+          <p className="text-sm text-[#667085] pb-4 border-b border-[#E4E7EC]">
             Last updated: {lastUpdated}
           </p>
 
@@ -463,7 +463,7 @@ export default function LegalPage({ type = 'privacy' }) {
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
             {isPrivacy ? 'Contact Us' : 'Contact Information'}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#101828] max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
             {isPrivacy
               ? 'For any questions or concerns regarding your privacy, you may contact us using the following details:'
               : 'If you have any questions about these Terms, please contact us at:'}

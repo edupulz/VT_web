@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { WHY_CHOOSE_US } from '../../data/company';
 import { gsap, isMobileViewport, prefersReducedMotion } from '../../utils/gsap';
@@ -56,7 +56,7 @@ export default function WhyChooseUsSection() {
               <p className="eyebrow-label mb-3">Why Vijayan Tech</p>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.14] text-[#101828]">
                 Your Technology Partner{' '}
-                <span className="text-[#101828]">
+                <span className="text-[#667085]">
                   for <span className="text-[#101828]">What&apos;s Next.</span>
                 </span>
               </h2>
@@ -74,7 +74,7 @@ export default function WhyChooseUsSection() {
                     <h3 className="font-display text-base sm:text-lg font-semibold text-[#101828]">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-sm sm:text-[15px] text-[#101828] leading-relaxed">
+                    <p className="mt-1 text-sm sm:text-[15px] text-[#667085] leading-relaxed">
                       {item.description}
                     </p>
                   </div>

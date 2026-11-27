@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { COMPANY_STATS } from '../../data/company';
@@ -64,12 +64,12 @@ export default function AboutSection() {
 
             <h2 className="about-reveal font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.14] text-[#101828]">
               Technology with Purpose.{' '}
-              <span className="text-[#101828]">
+              <span className="text-[#667085]">
                 Innovation with <span className="text-[#101828]">Impact.</span>
               </span>
             </h2>
 
-            <p className="about-reveal text-base sm:text-lg text-[#101828] leading-relaxed">
+            <p className="about-reveal text-base sm:text-lg text-[#667085] leading-relaxed">
               We partner with businesses to solve complex challenges, modernize operations, and
               create technology that drives meaningful growth.
             </p>
@@ -98,7 +98,7 @@ export default function AboutSection() {
                       {stat.value}
                       {stat.suffix}
                     </div>
-                    <p className="mt-1 text-xs sm:text-sm text-[#101828]">{stat.label}</p>
+                    <p className="mt-1 text-xs sm:text-sm text-[#667085]">{stat.label}</p>
                   </div>
                 ))}
               </div>

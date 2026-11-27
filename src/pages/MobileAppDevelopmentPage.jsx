@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -179,7 +179,7 @@ export default function MobileAppDevelopmentPage() {
               <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
                 Turn Ideas Into Powerful Mobile Experiences.
               </h1>
-              <p className="text-base sm:text-lg text-[#101828] leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
                 Connect your business with customers through intuitive, high-performing mobile
                 applications. We design and develop mobile experiences that simplify interactions,
                 support business operations, and keep your services accessible on the go.
@@ -210,7 +210,7 @@ export default function MobileAppDevelopmentPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               Mobile Applications Built Around Your Goals.
             </h2>
-            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+            <p className="mt-4 text-base text-[#667085] leading-relaxed">
               Whether you&apos;re launching a new product or extending your digital platform, we
               develop mobile applications tailored to your users, features, and business
               requirements.
@@ -231,7 +231,7 @@ export default function MobileAppDevelopmentPage() {
                   <h3 className="font-display text-xl font-semibold text-[#101828]">
                     {item.title}
                   </h3>
-                  <p className="text-sm sm:text-[15px] text-[#101828] leading-relaxed">
+                  <p className="text-sm sm:text-[15px] text-[#667085] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -249,7 +249,7 @@ export default function MobileAppDevelopmentPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               From Interface Design to App Deployment.
             </h2>
-            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+            <p className="mt-4 text-base text-[#667085] leading-relaxed">
               We bring together mobile technologies and essential application components to create
               complete mobile experiences.
             </p>
@@ -313,7 +313,7 @@ export default function MobileAppDevelopmentPage() {
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-[#101828] leading-relaxed">{item.description}</p>
+                    <p className="text-sm text-[#667085] leading-relaxed">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -335,9 +335,9 @@ export default function MobileAppDevelopmentPage() {
             <p className="eyebrow-label mb-3">Featured Projects</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               Mobile Experiences That{' '}
-              <span className="text-[#101828]">Make a Difference.</span>
+              <span className="text-[#667085]">Make a Difference.</span>
             </h2>
-            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+            <p className="mt-4 text-base text-[#667085] leading-relaxed">
               Discover mobile application concepts and projects designed to improve accessibility,
               simplify operations, and connect users with businesses.
             </p>
@@ -379,13 +379,13 @@ export default function MobileAppDevelopmentPage() {
                     <h3 className="font-display text-xl font-bold text-[#101828]">
                       {project.name}
                     </h3>
-                    <p className="text-sm text-[#101828] leading-relaxed">{project.summary}</p>
+                    <p className="text-sm text-[#667085] leading-relaxed">{project.summary}</p>
 
                     <div className="flex flex-wrap gap-2 pt-1">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 text-xs font-medium bg-[#F8FAFC] border border-[#E4E7EC] text-[#101828]"
+                          className="px-2.5 py-1 text-xs font-medium bg-[#F8FAFC] border border-[#E4E7EC] text-[#475467]"
                         >
                           {tech}
                         </span>
@@ -434,14 +434,14 @@ export default function MobileAppDevelopmentPage() {
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#101828] shrink-0 transition-transform duration-200 ${
+                      className={`w-5 h-5 text-[#667085] shrink-0 transition-transform duration-200 ${
                         isOpen ? 'rotate-180 text-[#2563EB]' : ''
                       }`}
                       aria-hidden="true"
                     />
                   </button>
                   {isOpen && (
-                    <p className="pb-5 text-sm sm:text-base text-[#101828] leading-relaxed">
+                    <p className="pb-5 text-sm sm:text-base text-[#667085] leading-relaxed">
                       {faq.answer}
                     </p>
                   )}

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CheckCircle2, ChevronDown } from 'lucide-react';
 import PageHead from '../components/PageHead';
@@ -20,7 +20,7 @@ export default function ProductDetailPage() {
         <h1 className="font-display text-3xl font-bold text-[#101828] mb-4">
           Product Not Found
         </h1>
-        <p className="text-[#101828] mb-8">
+        <p className="text-[#667085] mb-8">
           The requested product could not be found. Explore our full suite of platforms below.
         </p>
         <ActionButton to="/products" arrow="left" className="px-6 py-3 text-sm">
@@ -48,7 +48,7 @@ export default function ProductDetailPage() {
               <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
                 {page.hero.headline}
               </h1>
-              <p className="text-base sm:text-lg text-[#101828] leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
                 {page.hero.description}
               </p>
 
@@ -75,7 +75,7 @@ export default function ProductDetailPage() {
               {page.overview.heading}
             </h2>
             {page.overview.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="mt-4 text-base text-[#101828] leading-relaxed">
+              <p key={paragraph} className="mt-4 text-base text-[#667085] leading-relaxed">
                 {paragraph}
               </p>
             ))}
@@ -110,7 +110,7 @@ export default function ProductDetailPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               {page.modules.heading}
             </h2>
-            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+            <p className="mt-4 text-base text-[#667085] leading-relaxed">
               {page.modules.description}
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function ProductDetailPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               {page.benefits.heading}
             </h2>
-            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+            <p className="mt-4 text-base text-[#667085] leading-relaxed">
               {page.benefits.description}
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function ProductDetailPage() {
                 <h3 className="font-display text-xl font-semibold text-[#101828]">
                   {benefit.title}
                 </h3>
-                <p className="text-sm sm:text-[15px] text-[#101828] leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-[#667085] leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -231,7 +231,7 @@ export default function ProductDetailPage() {
                 <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
                   {page.whyChoose.heading}
                 </h2>
-                <p className="mt-4 text-base text-[#101828] leading-relaxed">
+                <p className="mt-4 text-base text-[#667085] leading-relaxed">
                   {page.whyChoose.description}
                 </p>
               </div>
@@ -251,7 +251,7 @@ export default function ProductDetailPage() {
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-[#101828] leading-relaxed">{item.description}</p>
+                    <p className="text-sm text-[#667085] leading-relaxed">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -285,14 +285,14 @@ export default function ProductDetailPage() {
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#101828] shrink-0 transition-transform duration-200 ${
+                      className={`w-5 h-5 text-[#667085] shrink-0 transition-transform duration-200 ${
                         isOpen ? 'rotate-180 text-[#2563EB]' : ''
                       }`}
                       aria-hidden="true"
                     />
                   </button>
                   {isOpen && (
-                    <p className="pb-5 text-sm sm:text-base text-[#101828] leading-relaxed">
+                    <p className="pb-5 text-sm sm:text-base text-[#667085] leading-relaxed">
                       {faq.answer}
                     </p>
                   )}
@@ -310,7 +310,7 @@ export default function ProductDetailPage() {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] text-[#101828]">
             {page.cta.headline}
           </h2>
-          <p className="mt-5 text-base sm:text-lg text-[#101828] max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 text-base sm:text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
             {page.cta.description}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
