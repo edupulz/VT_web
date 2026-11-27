@@ -1,4 +1,4 @@
-import ActionButton from '../ActionButton';
+﻿import ActionButton from '../ActionButton';
 
 export default function CtaSection() {
   return (
@@ -7,11 +7,11 @@ export default function CtaSection() {
         <p className="eyebrow-label mb-4">Start Your Next Initiative</p>
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] text-[#101828]">
           Have an Idea?
-          <span className="block mt-1 text-[#667085]">
+          <span className="block mt-1 text-[#101828]">
             Let&apos;s Build It <span className="text-[#101828]">Together.</span>
           </span>
         </h2>
-        <p className="mt-5 text-base sm:text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-5 text-base sm:text-lg text-[#101828] max-w-2xl mx-auto leading-relaxed">
           Let&apos;s build something extraordinary together with technology that drives your business forward.
         </p>
         <div className="mt-8">

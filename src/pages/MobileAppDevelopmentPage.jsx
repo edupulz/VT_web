@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -17,113 +17,117 @@ import {
 } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
+import PageHeroImage from '../components/PageHeroImage';
 import ActionButton from '../components/ActionButton';
 import ProcessSection from '../components/sections/ProcessSection';
 import CtaSection from '../components/sections/CtaSection';
+import { MOBILE_APPS } from '../data/portfolio';
 import mobileHeroImg from '../assets/images/service-mobile.jpg';
 import mobileWhyChooseImg from '../assets/images/mobile-why-choose.jpg';
-import project1Img from '../assets/images/mobile-project-1.jpg';
-import project2Img from '../assets/images/mobile-project-2.jpg';
-import project3Img from '../assets/images/mobile-project-3.jpg';
 
 const MOBILE_SERVICES = [
   {
     icon: Smartphone,
     title: 'Android App Development',
-    description: 'Feature-rich applications designed for Android devices.',
+    description: 'Develop feature-rich applications for Android devices.',
   },
   {
     icon: Sparkles,
     title: 'iOS App Development',
-    description: 'Smooth and intuitive applications for Apple devices.',
+    description: 'Create intuitive applications for Apple devices.',
   },
   {
     icon: Layers,
     title: 'Cross-Platform App Development',
-    description: 'Efficient applications for multiple platforms.',
+    description: 'Build applications for multiple platforms using suitable shared technologies.',
   },
   {
     icon: Code2,
     title: 'Custom Mobile App Development',
-    description: 'Applications built around your unique business requirements.',
+    description: 'Develop applications around your unique business requirements.',
   },
   {
     icon: Palette,
-    title: 'UI/UX App Design',
-    description: 'Engaging interfaces and seamless user journeys.',
+    title: 'Mobile UI/UX Design',
+    description: 'Create intuitive interfaces and user journeys.',
   },
   {
     icon: Wrench,
     title: 'App Maintenance & Support',
-    description: 'Continuous improvements and technical assistance.',
+    description: 'Maintain, update, and enhance your applications.',
   },
 ];
 
 const EXPERTISE_ITEMS = [
-  { icon: Smartphone, label: 'Android & iOS Development' },
-  { icon: Layers, label: 'Cross-Platform Development' },
-  { icon: Code2, label: 'Flutter & React Native' },
-  { icon: Palette, label: 'Mobile UI/UX Design' },
-  { icon: Server, label: 'API & Backend Integration' },
-  { icon: Bell, label: 'Push Notifications' },
-  { icon: CreditCard, label: 'Payment Gateway Integration' },
-  { icon: ShieldCheck, label: 'App Security & Performance Optimisation' },
+  { icon: Smartphone, label: 'Native Android & iOS Development' },
+  { icon: Code2, label: 'Flutter & React Native Development' },
+  { icon: Palette, label: 'Mobile UI/UX Design & Prototyping' },
+  { icon: Server, label: 'Backend & API Integration' },
+  { icon: Bell, label: 'Push Notification Implementation' },
+  { icon: CreditCard, label: 'Payment & Authentication Integration' },
+  { icon: ShieldCheck, label: 'Mobile Application Security' },
+  { icon: Layers, label: 'App Performance Testing & Optimisation' },
 ];
 
 const WHY_CHOOSE_ITEMS = [
   {
-    title: 'User-Centred Design',
-    description: 'Easy-to-use and engaging application experiences.',
+    title: 'User-Focused Interfaces',
+    description: 'Make application interactions intuitive and convenient.',
   },
   {
-    title: 'Custom Functionality',
-    description: 'Features tailored to your business.',
+    title: 'Purpose-Built Features',
+    description: 'Align app functionality with your business objectives.',
   },
   {
-    title: 'Cross-Platform Reach',
-    description: 'Reach users across multiple devices.',
+    title: 'Platform Flexibility',
+    description: 'Choose native or cross-platform development according to your needs.',
   },
   {
-    title: 'High Performance',
-    description: 'Smooth application performance.',
+    title: 'Reliable Performance',
+    description: 'Optimise applications for supported devices and operating systems.',
   },
   {
-    title: 'Secure Architecture',
-    description: 'Designed with data protection in mind.',
+    title: 'Secure Data Handling',
+    description: 'Apply appropriate authentication and data protection practices.',
   },
   {
-    title: 'Continuous Support',
-    description: 'Assistance with updates and improvements.',
+    title: 'Continuous Improvements',
+    description: 'Support updates, enhancements, and future releases.',
   },
 ];
 
+const mobileAppByName = Object.fromEntries(MOBILE_APPS.map((item) => [item.name, item]));
+
 const FEATURED_PROJECTS = [
   {
-    name: 'CampusConnect ERP',
-    category: 'Education & Operations',
+    name: mobileAppByName['Smart School ERP'].name,
+    category: mobileAppByName['Smart School ERP'].category,
     platforms: ['Android', 'iOS'],
-    image: project1Img,
+    image: mobileAppByName['Smart School ERP'].image,
+    to: '/products/school-erp',
     technologies: ['Flutter', 'Node.js', 'PostgreSQL', 'Firebase'],
     summary:
-      'Unified mobile companion for attendance, fee payments, live announcements, and parent-teacher communication.',
+      'Unified school companion for attendance, fee payments, live announcements, and parent-teacher communication.',
   },
   {
-    name: 'LoadTrack Fleet',
-    category: 'Logistics & Supply Chain',
-    platforms: ['Android', 'iOS'],
-    image: project2Img,
+    name: mobileAppByName['Load Tracker'].name,
+    category: mobileAppByName['Load Tracker'].category,
+    platforms: ['Android'],
+    image: mobileAppByName['Load Tracker'].image,
+    to: '/products/load-tracker',
     technologies: ['React Native', 'Go', 'Google Maps API', 'REST APIs'],
     summary:
       'Real-time dispatch tracking, digital proof of delivery, and route updates built for drivers and fleet managers.',
   },
   {
-    name: 'GymPro Member',
-    category: 'Fitness & Lifestyle',
-    platforms: ['Android', 'iOS'],
-    image: project3Img,
+    name: mobileAppByName['Gym Pro'].name,
+    category: mobileAppByName['Gym Pro'].category,
+    platforms: ['Android'],
+    image: mobileAppByName['Gym Pro'].image,
+    to: '/products/gym-pro',
     technologies: ['Flutter', 'TypeScript', 'Razorpay', 'Push Notifications'],
     summary:
-      'Seamless class booking, membership renewals, workout logs, and automated renewal reminders in one app.',
+      'Seamless member check-ins, membership renewals, workout logs, and automated renewal reminders in one app.',
   },
 ];
 
@@ -162,7 +166,7 @@ export default function MobileAppDevelopmentPage() {
     <>
       <PageHead
         title="Mobile App Development | Vijayan Tech"
-        description="We develop innovative, intuitive, and high-performance Android, iOS, and cross-platform mobile applications tailored to your business."
+        description="Connect your business with customers through intuitive, high-performing mobile applications that simplify interactions and support business operations."
       />
 
       {/* 1. Hero Section */}
@@ -171,43 +175,28 @@ export default function MobileAppDevelopmentPage() {
         <div className="relative z-10 max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <p className="eyebrow-label">Mobile App Development</p>
+              <p className="eyebrow-label">MOBILE APP DEVELOPMENT</p>
               <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
-                Turning Ideas Into Powerful{' '}
-                <span className="text-[#667085]">
-                  Mobile <span className="text-[#101828]">Experiences.</span>
-                </span>
+                Turn Ideas Into Powerful Mobile Experiences.
               </h1>
-              <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
-                We develop innovative, intuitive, and high-performance mobile applications that
-                connect businesses with their customers. From concept to deployment, we transform
-                your ideas into seamless mobile experiences.
+              <p className="text-base sm:text-lg text-[#101828] leading-relaxed max-w-2xl">
+                Connect your business with customers through intuitive, high-performing mobile
+                applications. We design and develop mobile experiences that simplify interactions,
+                support business operations, and keep your services accessible on the go.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <ActionButton to="/contact" className="px-7 py-4 text-sm sm:text-base">
                   Build Your Mobile App
                 </ActionButton>
-                <ActionButton
-                  to="/services/mobile-app-development#featured-projects"
-                  variant="secondary"
-                  className="px-7 py-4 text-sm sm:text-base"
-                >
-                  Explore Our Work
-                </ActionButton>
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="overflow-hidden rounded-none border border-[#E4E7EC] bg-white">
-                <div className="aspect-[4/3] w-full">
-                  <img
-                    src={mobileHeroImg}
-                    alt="Mobile application development for iOS and Android"
-                    className="w-full h-full object-cover object-center"
-                  />
-                </div>
-              </div>
+              <PageHeroImage
+                src={mobileHeroImg}
+                alt="Mobile application development for iOS and Android"
+              />
             </div>
           </div>
         </div>
@@ -219,13 +208,12 @@ export default function MobileAppDevelopmentPage() {
           <div className="max-w-2xl mb-14">
             <p className="eyebrow-label mb-3">Services Overview</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              Everything You Need to{' '}
-              <span className="text-[#667085]">Build a Powerful App.</span>
+              Mobile Applications Built Around Your Goals.
             </h2>
-            <p className="mt-4 text-base text-[#667085] leading-relaxed">
-              Whether you&apos;re launching a new application or expanding an existing digital
-              platform, we provide end-to-end mobile app development solutions tailored to your
-              goals.
+            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+              Whether you&apos;re launching a new product or extending your digital platform, we
+              develop mobile applications tailored to your users, features, and business
+              requirements.
             </p>
           </div>
 
@@ -243,7 +231,7 @@ export default function MobileAppDevelopmentPage() {
                   <h3 className="font-display text-xl font-semibold text-[#101828]">
                     {item.title}
                   </h3>
-                  <p className="text-sm sm:text-[15px] text-[#667085] leading-relaxed">
+                  <p className="text-sm sm:text-[15px] text-[#101828] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -253,14 +241,18 @@ export default function MobileAppDevelopmentPage() {
         </div>
       </section>
 
-      {/* 3. Our Expertise */}
+      {/* 3. Our Capabilities */}
       <section className="py-20 sm:py-24 bg-[#F7F9FC] border-t border-[#E4E7EC]">
         <div className="max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="max-w-2xl mb-12">
-            <p className="eyebrow-label mb-3">Our Expertise</p>
+            <p className="eyebrow-label mb-3">Our Capabilities</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-              Everything Your <span className="text-[#667085]">App Needs.</span>
+              From Interface Design to App Deployment.
             </h2>
+            <p className="mt-4 text-base text-[#101828] leading-relaxed">
+              We bring together mobile technologies and essential application components to create
+              complete mobile experiences.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -303,10 +295,9 @@ export default function MobileAppDevelopmentPage() {
 
             <div className="lg:col-span-7 space-y-8">
               <div>
-                <p className="eyebrow-label mb-3">Why Choose Us</p>
+                <p className="eyebrow-label mb-3">Why Choose Us?</p>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
-                  Connecting Your Business{' '}
-                  <span className="text-[#667085]">With the Mobile World.</span>
+                  Better Mobile Experiences. Stronger Customer Connections.
                 </h2>
               </div>
 
@@ -322,7 +313,7 @@ export default function MobileAppDevelopmentPage() {
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-[#667085] leading-relaxed">{item.description}</p>
+                    <p className="text-sm text-[#101828] leading-relaxed">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -344,9 +335,9 @@ export default function MobileAppDevelopmentPage() {
             <p className="eyebrow-label mb-3">Featured Projects</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               Mobile Experiences That{' '}
-              <span className="text-[#667085]">Make a Difference.</span>
+              <span className="text-[#101828]">Make a Difference.</span>
             </h2>
-            <p className="mt-4 text-base text-[#667085] leading-relaxed">
+            <p className="mt-4 text-base text-[#101828] leading-relaxed">
               Discover mobile application concepts and projects designed to improve accessibility,
               simplify operations, and connect users with businesses.
             </p>
@@ -388,13 +379,13 @@ export default function MobileAppDevelopmentPage() {
                     <h3 className="font-display text-xl font-bold text-[#101828]">
                       {project.name}
                     </h3>
-                    <p className="text-sm text-[#667085] leading-relaxed">{project.summary}</p>
+                    <p className="text-sm text-[#101828] leading-relaxed">{project.summary}</p>
 
                     <div className="flex flex-wrap gap-2 pt-1">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 text-xs font-medium bg-[#F8FAFC] border border-[#E4E7EC] text-[#475467]"
+                          className="px-2.5 py-1 text-xs font-medium bg-[#F8FAFC] border border-[#E4E7EC] text-[#101828]"
                         >
                           {tech}
                         </span>
@@ -405,7 +396,7 @@ export default function MobileAppDevelopmentPage() {
 
                 <div className="px-7 pb-7 pt-4 border-t border-[#F1F3F6]">
                   <Link
-                    to="/contact"
+                    to={project.to || '/portfolio'}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-[#101828] group-hover:text-[#2563EB] transition-colors"
                   >
                     <span>View Project</span>
@@ -443,14 +434,14 @@ export default function MobileAppDevelopmentPage() {
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#667085] shrink-0 transition-transform duration-200 ${
+                      className={`w-5 h-5 text-[#101828] shrink-0 transition-transform duration-200 ${
                         isOpen ? 'rotate-180 text-[#2563EB]' : ''
                       }`}
                       aria-hidden="true"
                     />
                   </button>
                   {isOpen && (
-                    <p className="pb-5 text-sm sm:text-base text-[#667085] leading-relaxed">
+                    <p className="pb-5 text-sm sm:text-base text-[#101828] leading-relaxed">
                       {faq.answer}
                     </p>
                   )}

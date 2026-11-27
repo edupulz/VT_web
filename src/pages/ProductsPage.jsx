@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
 import { PRODUCTS } from '../data/products';
+import { PRODUCT_PAGES } from '../data/productPages';
 import CtaSection from '../components/sections/CtaSection';
 
 const BENTO_SPANS = [
@@ -29,11 +30,11 @@ export default function ProductsPage() {
             <p className="eyebrow-label mb-4">Our Products</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
               Enterprise Platforms.{' '}
-              <span className="text-[#667085]">
+              <span className="text-[#101828]">
                 Built to <span className="text-[#101828]">Scale.</span>
               </span>
             </h1>
-            <p className="mt-6 text-lg text-[#667085] leading-relaxed">
+            <p className="mt-6 text-lg text-[#101828] leading-relaxed">
               Purpose-built software products engineered for education, retail, logistics,
               fitness, and enterprise operations.
             </p>
@@ -47,6 +48,7 @@ export default function ProductsPage() {
             {PRODUCTS.map((product, idx) => {
               const spanClass = BENTO_SPANS[idx] || 'lg:col-span-1 lg:row-span-1';
               const isFeatured = idx === 0;
+              const productSummary = PRODUCT_PAGES[product.slug]?.metaDescription;
 
               return (
                 <Link
@@ -61,25 +63,33 @@ export default function ProductsPage() {
                     className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
                   <div
-                    className="absolute inset-0 bg-gradient-to-t from-[#101828]/90 via-[#101828]/25 to-transparent"
+                    className="absolute inset-0 bg-gradient-to-t from-[#101828]/90 via-[#101828]/25 to-transparent group-hover:via-[#101828]/80 group-hover:to-[#101828]/45 group-focus-visible:via-[#101828]/80 group-focus-visible:to-[#101828]/45 transition-colors duration-300"
                     aria-hidden="true"
                   />
 
-                  <div className="relative z-10 p-6 flex items-end justify-between gap-3">
-                    <h2
-                      className={`font-display font-semibold text-white tracking-tight min-w-0 leading-snug ${
-                        isFeatured ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'
-                      }`}
-                    >
-                      {product.title}
-                    </h2>
+                  <div className="relative z-10 p-6 flex flex-col justify-end">
+                    <div className="flex items-end justify-between gap-3">
+                      <h2
+                        className={`font-display font-semibold text-white tracking-tight min-w-0 leading-snug ${
+                          isFeatured ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'
+                        }`}
+                      >
+                        {product.title}
+                      </h2>
 
-                    <span className="shrink-0 inline-flex items-center bg-transparent text-white py-1 transition-all duration-300">
-                      <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-xs font-semibold tracking-wide transition-all duration-300 group-hover:max-w-[90px] group-hover:opacity-100 group-hover:mr-2">
-                        Know more
+                      <span className="shrink-0 inline-flex items-center bg-transparent text-white py-1 transition-all duration-300">
+                        <span className="max-w-0 opacity-0 overflow-hidden whitespace-nowrap text-xs font-semibold tracking-wide transition-all duration-300 group-hover:max-w-[90px] group-hover:opacity-100 group-hover:mr-2 group-focus-visible:max-w-[90px] group-focus-visible:opacity-100 group-focus-visible:mr-2">
+                          Know more
+                        </span>
+                        <ArrowRight className="w-5 h-5 shrink-0" aria-hidden="true" />
                       </span>
-                      <ArrowRight className="w-5 h-5 shrink-0" aria-hidden="true" />
-                    </span>
+                    </div>
+
+                    {productSummary && (
+                      <p className="max-h-0 opacity-0 overflow-hidden text-xs sm:text-sm text-slate-200 leading-relaxed transition-all duration-300 group-hover:max-h-[140px] group-hover:opacity-100 group-hover:mt-2.5 group-focus-visible:max-h-[140px] group-focus-visible:opacity-100 group-focus-visible:mt-2.5">
+                        {productSummary}
+                      </p>
+                    )}
                   </div>
                 </Link>
               );

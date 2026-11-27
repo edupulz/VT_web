@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+﻿import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { SERVICES } from '../../data/services';
@@ -131,14 +131,14 @@ export default function ServicesSection() {
             <p className="eyebrow-label mb-3">Our Services</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.14] text-[#101828]">
               Technology Solutions.{' '}
-              <span className="text-[#667085]">
+              <span className="text-[#101828]">
                 Designed for <span className="text-[#101828]">Progress.</span>
               </span>
             </h2>
           </div>
 
           <div className="flex items-center gap-3 shrink-0 ml-auto">
-            <span className="font-display text-sm font-semibold tracking-wider text-[#667085] mr-1">
+            <span className="font-display text-sm font-semibold tracking-wider text-[#101828] mr-1">
               <span className="text-[#101828]">{formattedIndex}</span> / {formattedTotal}
             </span>
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef, lazy, Suspense } from 'react';
+﻿import { useEffect, useRef, lazy, Suspense } from 'react';
 import ActionButton from '../ActionButton';
 import { gsap, isMobileViewport, prefersReducedMotion } from '../../utils/gsap';
 import innovationBgImg from '../../assets/images/innovation-bg.jpg';
@@ -45,11 +45,11 @@ export default function InnovationSection() {
             <p className="eyebrow-label">Technology &amp; Innovation</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.14] text-[#101828]">
               Building Intelligent{' '}
-              <span className="text-[#667085]">
+              <span className="text-[#101828]">
                 Digital <span className="text-[#101828]">Experiences.</span>
               </span>
             </h2>
-            <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg text-[#101828] leading-relaxed max-w-2xl">
               From distributed cloud topologies to production-grade AI pipelines, we engineer
               resilient infrastructure that transforms complexity into decisive operational speed.
             </p>
@@ -65,7 +65,7 @@ export default function InnovationSection() {
               <Suspense fallback={null}>
                 <ThreeNetworkCanvas className="w-full h-full" />
               </Suspense>
-              <span className="absolute bottom-3 left-4 text-[11px] font-medium tracking-wider uppercase text-[#667085]">
+              <span className="absolute bottom-3 left-4 text-[11px] font-medium tracking-wider uppercase text-[#101828]">
                 Global Node Mesh
               </span>
             </div>

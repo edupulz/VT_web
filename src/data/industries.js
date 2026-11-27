@@ -1,4 +1,3 @@
-import healthcareImg from '../assets/images/industry-healthcare.jpg';
 import financeImg from '../assets/images/industry-finance.jpg';
 import educationImg from '../assets/images/industry-education.jpg';
 import retailImg from '../assets/images/industry-retail.jpg';
@@ -7,57 +6,43 @@ import logisticsImg from '../assets/images/industry-logistics.jpg';
 
 export const INDUSTRIES = [
   {
-    id: 'healthcare',
-    name: 'Healthcare',
-    tagline: 'Interoperable digital health platforms and HIPAA-aligned clinical workflows.',
+    id: 'education',
+    name: 'Education',
+    tagline: 'Unified school ERP platforms and digital campus experiences for modern institutions.',
     description:
-      'We engineer patient portals, telehealth ecosystems, and AI-assisted diagnostic pipelines that connect care teams and safeguard sensitive health data.',
-    image: healthcareImg,
-    highlights: ['HL7 / FHIR Interoperability', 'Telehealth & Patient Portals', 'Clinical Data Analytics'],
+      'We build unified school ERP platforms, digital campus portals, and learning management systems that connect students, educators, parents, and administrators in one place. From admissions, attendance, and examination workflows to fee collection and mobile communication, our solutions simplify institutional administration while elevating everyday learning experiences.',
+    image: educationImg,
   },
   {
     id: 'finance-banking',
     name: 'Finance & Banking',
-    tagline: 'High-trust core banking modernization, real-time payments, and risk intelligence.',
+    tagline: 'High-trust financial modernization, automated billing, and compliance precision.',
     description:
-      'Built for zero-compromise security and regulatory precision, our financial systems power digital banking, fraud detection, and automated compliance.',
+      'Built for zero-compromise security and regulatory precision, our financial software systems modernize core billing, digital payment workflows, and institutional compliance. From automated invoicing and ledger reconciliation to real-time transaction visibility and audit-ready reporting, we help financial teams operate with speed, accuracy, and trust.',
     image: financeImg,
-    highlights: ['Core Ledger Modernization', 'Real-Time Fraud Detection', 'Open Banking APIs'],
-  },
-  {
-    id: 'education',
-    name: 'Education',
-    tagline: 'Scalable learning platforms and adaptive digital campuses for global institutions.',
-    description:
-      'We create accessible, high-concurrency learning management systems, virtual classrooms, and student analytics that elevate modern education.',
-    image: educationImg,
-    highlights: ['Adaptive Learning Engines', 'Global LMS Infrastructure', 'Accessible Student Portals'],
   },
   {
     id: 'retail-ecommerce',
     name: 'Retail & eCommerce',
     tagline: 'Unified omnichannel commerce and intelligent inventory orchestration.',
     description:
-      'From headless storefronts to real-time demand forecasting, we help global retailers deliver fast, personalized buying experiences at peak scale.',
+      'From custom digital storefronts and mobile shopping experiences to unified inventory, order, and billing orchestration, we empower retail brands to sell seamlessly across every channel. Our platforms combine fast, conversion-focused customer journeys with real-time stock visibility, automated invoicing, and scalable cloud performance.',
     image: retailImg,
-    highlights: ['Headless Global Storefronts', 'Omnichannel Order Sync', 'AI Merchandising'],
   },
   {
     id: 'manufacturing',
     name: 'Manufacturing',
-    tagline: 'Connected factory telemetry, predictive maintenance, and digital twins.',
+    tagline: 'Connected industrial operations, production visibility, and integrated ERP workflows.',
     description:
-      'We bridge industrial operations and cloud intelligence—turning sensor streams into actionable quality control, uptime, and supply visibility.',
+      'We bridge shop-floor operations and enterprise intelligence with custom software, production tracking, and integrated ERP systems tailored for industrial teams. By turning operational workflows, inventory movement, and quality records into real-time digital visibility, we help manufacturers reduce downtime, streamline coordination, and scale output reliably.',
     image: manufacturingImg,
-    highlights: ['Industrial IoT Telemetry', 'Predictive Maintenance', 'MES & ERP Integration'],
   },
   {
     id: 'logistics',
     name: 'Logistics',
-    tagline: 'Real-time fleet visibility, route optimization, and autonomous supply chains.',
+    tagline: 'Real-time fleet visibility, load tracking, and coordinated supply chains.',
     description:
-      'Our logistics platforms synchronize warehouses, carriers, and last-mile delivery networks with sub-second tracking and predictive routing.',
+      'Our logistics and load-tracking platforms synchronize dispatchers, drivers, vehicles, and warehouses with real-time operational visibility from pickup to final delivery. By automating load assignments, route coordination, digital proof of delivery, and performance reporting, we help transport and supply-chain businesses keep every shipment on schedule.',
     image: logisticsImg,
-    highlights: ['Fleet & Asset Telemetry', 'Dynamic Route Optimization', 'Warehouse Automation'],
   },
 ];

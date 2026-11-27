@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+﻿import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ActionButton from '../ActionButton';
 import { gsap, prefersReducedMotion } from '../../utils/gsap';
@@ -89,29 +89,29 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="max-w-3xl">
-          <p className="eyebrow-label mb-5">Global Digital Engineering</p>
+        <div className="max-w-4xl">
+          <p className="eyebrow-label mb-5">Innovation Beyond Technology</p>
 
           <h1
             ref={headlineRef}
-            className="font-display text-4xl sm:text-5xl lg:text-[4.25rem] font-bold tracking-tight leading-[1.08] text-[#101828]"
+            className="font-display text-4xl sm:text-5xl lg:text-[4rem] font-bold tracking-tight leading-[1.08] text-[#101828]"
           >
-            <span className="block">Engineering Tomorrow.</span>
-            <span className="block mt-1 text-[#667085]">
-              Building <span className="text-[#101828]">What&apos;s Next.</span>
+            <span className="block">Creating Digital Solutions</span>
+            <span className="block mt-1 text-[#101828]">
+              That Move You <span className="text-[#101828]">Forward.</span>
             </span>
           </h1>
 
           <p
             ref={descRef}
-            className="mt-7 text-lg sm:text-xl text-[#475467] leading-relaxed max-w-2xl"
+            className="mt-7 text-lg sm:text-xl text-[#101828] leading-relaxed max-w-2xl"
           >
             We transform ambitious ideas into intelligent digital solutions through innovative
             engineering, scalable technology, and meaningful experiences.
           </p>
 
           <div ref={ctaRef} className="mt-9 flex flex-wrap items-center gap-4">
-            <ActionButton href="#services" className="px-6 py-3.5 text-sm sm:text-base">
+            <ActionButton to="/services" className="px-6 py-3.5 text-sm sm:text-base">
               Explore Our Services
             </ActionButton>
 

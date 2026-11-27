@@ -1,8 +1,9 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CheckCircle2, ChevronDown } from 'lucide-react';
 import PageHead from '../components/PageHead';
 import PageHeroBackground from '../components/PageHeroBackground';
+import PageHeroImage from '../components/PageHeroImage';
 import Icon from '../components/Icon';
 import ActionButton from '../components/ActionButton';
 import { PRODUCT_PAGES } from '../data/productPages';
@@ -19,7 +20,7 @@ export default function ProductDetailPage() {
         <h1 className="font-display text-3xl font-bold text-[#101828] mb-4">
           Product Not Found
         </h1>
-        <p className="text-[#667085] mb-8">
+        <p className="text-[#101828] mb-8">
           The requested product could not be found. Explore our full suite of platforms below.
         </p>
         <ActionButton to="/products" arrow="left" className="px-6 py-3 text-sm">
@@ -47,7 +48,7 @@ export default function ProductDetailPage() {
               <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-[#101828]">
                 {page.hero.headline}
               </h1>
-              <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-[#101828] leading-relaxed max-w-2xl">
                 {page.hero.description}
               </p>
 
@@ -55,40 +56,11 @@ export default function ProductDetailPage() {
                 <ActionButton to="/contact" className="px-7 py-4 text-sm sm:text-base">
                   {page.hero.primaryCta}
                 </ActionButton>
-                <ActionButton
-                  to={`/products/${slug}#key-modules`}
-                  variant="secondary"
-                  className="px-7 py-4 text-sm sm:text-base"
-                >
-                  {page.hero.secondaryCta}
-                </ActionButton>
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative pr-3 pb-3">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 top-3 left-3 bg-[#EAF2FF]"
-                  style={{
-                    clipPath: 'polygon(8% 0, 100% 0, 100% 86%, 92% 100%, 0 100%, 0 14%)',
-                  }}
-                />
-                <div
-                  className="relative overflow-hidden bg-[#101828]"
-                  style={{
-                    clipPath: 'polygon(8% 0, 100% 0, 100% 86%, 92% 100%, 0 100%, 0 14%)',
-                  }}
-                >
-                  <div className="aspect-[4/3] w-full">
-                    <img
-                      src={page.hero.image}
-                      alt={page.hero.imageAlt}
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </div>
-                </div>
-              </div>
+              <PageHeroImage src={page.hero.image} alt={page.hero.imageAlt} />
             </div>
           </div>
         </div>
@@ -103,7 +75,7 @@ export default function ProductDetailPage() {
               {page.overview.heading}
             </h2>
             {page.overview.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="mt-4 text-base text-[#667085] leading-relaxed">
+              <p key={paragraph} className="mt-4 text-base text-[#101828] leading-relaxed">
                 {paragraph}
               </p>
             ))}
@@ -138,7 +110,7 @@ export default function ProductDetailPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               {page.modules.heading}
             </h2>
-            <p className="mt-4 text-base text-[#667085] leading-relaxed">
+            <p className="mt-4 text-base text-[#101828] leading-relaxed">
               {page.modules.description}
             </p>
           </div>
@@ -147,34 +119,55 @@ export default function ProductDetailPage() {
             {page.modules.items.map((mod) => (
               <div
                 key={mod.number}
-                className="p-7 rounded-none bg-white border border-[#E4E7EC] hover:border-[#2563EB]/40 transition-all duration-300 flex flex-col justify-between space-y-6"
+                className="group relative h-[350px] sm:h-[360px] rounded-none bg-[#101828] border border-[#E4E7EC] hover:border-[#2563EB]/60 overflow-hidden shadow-[0_8px_28px_rgba(16,24,40,0.08)] transition-[border-color,box-shadow] duration-300 flex flex-col"
               >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="w-11 h-11 rounded-none bg-[#EAF2FF] text-[#2563EB] flex items-center justify-center">
-                      <Icon name={mod.iconName} className="w-5 h-5" />
-                    </div>
-                    <span className="font-display text-sm font-bold tracking-wider text-[#2563EB]">
-                      {mod.number}
-                    </span>
-                  </div>
-                  <h3 className="font-display text-xl font-semibold text-[#101828]">{mod.title}</h3>
-                  <p className="text-sm sm:text-[15px] text-[#667085] leading-relaxed">
-                    {mod.description}
-                  </p>
-                </div>
+                {mod.image ? (
+                  <img
+                    src={mod.image}
+                    alt={mod.title}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-[#1E293B] via-[#101828] to-[#0B1120]"
+                    aria-hidden="true"
+                  />
+                )}
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-[#101828]/90 via-[#101828]/30 to-transparent group-hover:from-[#101828]/95 group-hover:via-[#101828]/85 group-hover:to-[#101828]/65 transition-colors duration-300"
+                  aria-hidden="true"
+                />
 
-                <ul className="pt-4 border-t border-[#F1F3F6] space-y-2.5">
-                  {mod.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2.5 text-sm text-[#475467]">
-                      <CheckCircle2
-                        className="w-4 h-4 text-[#2563EB] shrink-0"
-                        aria-hidden="true"
-                      />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="relative z-10 p-7 flex flex-col justify-between flex-1">
+                  <div className="w-11 h-11 rounded-none bg-white/10 backdrop-blur-sm border border-white/15 text-white flex items-center justify-center">
+                    <Icon name={mod.iconName} className="w-5 h-5" />
+                  </div>
+
+                  <div className="mt-auto pt-6">
+                    <h3 className="font-display text-xl font-semibold text-white">
+                      {mod.title}
+                    </h3>
+
+                    <div className="max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-[280px] group-hover:opacity-100 group-hover:mt-3">
+                      <p className="text-sm text-slate-200 leading-relaxed">{mod.description}</p>
+                      <ul className="mt-3 pt-3 border-t border-white/15 space-y-1.5">
+                        {mod.features.map((feature) => (
+                          <li
+                            key={feature}
+                            className="flex items-center gap-2 text-xs sm:text-sm text-slate-100"
+                          >
+                            <CheckCircle2
+                              className="w-4 h-4 text-[#60A5FA] shrink-0"
+                              aria-hidden="true"
+                            />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -189,29 +182,24 @@ export default function ProductDetailPage() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
               {page.benefits.heading}
             </h2>
-            <p className="mt-4 text-base text-[#667085] leading-relaxed">
+            <p className="mt-4 text-base text-[#101828] leading-relaxed">
               {page.benefits.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {page.benefits.items.map((benefit, idx) => (
+            {page.benefits.items.map((benefit) => (
               <div
                 key={benefit.title}
                 className="p-7 rounded-none bg-[#F8FAFC] border border-[#E4E7EC] hover:border-[#2563EB]/40 hover:bg-white transition-all duration-300 space-y-4"
               >
-                <div className="flex items-center justify-between gap-3">
-                  <div className="w-11 h-11 rounded-none bg-[#EAF2FF] text-[#2563EB] flex items-center justify-center">
-                    <Icon name={benefit.iconName} className="w-5 h-5" />
-                  </div>
-                  <span className="font-display text-xs font-bold tracking-wider text-[#667085]">
-                    {String(idx + 1).padStart(2, '0')}
-                  </span>
+                <div className="w-11 h-11 rounded-none bg-[#EAF2FF] text-[#2563EB] flex items-center justify-center">
+                  <Icon name={benefit.iconName} className="w-5 h-5" />
                 </div>
                 <h3 className="font-display text-xl font-semibold text-[#101828]">
                   {benefit.title}
                 </h3>
-                <p className="text-sm sm:text-[15px] text-[#667085] leading-relaxed">
+                <p className="text-sm sm:text-[15px] text-[#101828] leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -243,7 +231,7 @@ export default function ProductDetailPage() {
                 <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#101828]">
                   {page.whyChoose.heading}
                 </h2>
-                <p className="mt-4 text-base text-[#667085] leading-relaxed">
+                <p className="mt-4 text-base text-[#101828] leading-relaxed">
                   {page.whyChoose.description}
                 </p>
               </div>
@@ -263,7 +251,7 @@ export default function ProductDetailPage() {
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-[#667085] leading-relaxed">{item.description}</p>
+                    <p className="text-sm text-[#101828] leading-relaxed">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -297,14 +285,14 @@ export default function ProductDetailPage() {
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#667085] shrink-0 transition-transform duration-200 ${
+                      className={`w-5 h-5 text-[#101828] shrink-0 transition-transform duration-200 ${
                         isOpen ? 'rotate-180 text-[#2563EB]' : ''
                       }`}
                       aria-hidden="true"
                     />
                   </button>
                   {isOpen && (
-                    <p className="pb-5 text-sm sm:text-base text-[#667085] leading-relaxed">
+                    <p className="pb-5 text-sm sm:text-base text-[#101828] leading-relaxed">
                       {faq.answer}
                     </p>
                   )}
@@ -322,7 +310,7 @@ export default function ProductDetailPage() {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12] text-[#101828]">
             {page.cta.headline}
           </h2>
-          <p className="mt-5 text-base sm:text-lg text-[#667085] max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 text-base sm:text-lg text-[#101828] max-w-2xl mx-auto leading-relaxed">
             {page.cta.description}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

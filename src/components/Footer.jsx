@@ -24,7 +24,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#101828] text-slate-300 border-t border-slate-800">
-      <div className="max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-12 pt-16 pb-12">
+      <div className="max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-12 pt-16 pb-24 sm:pb-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-slate-800">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-5">
@@ -184,7 +184,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Legal Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 sm:pr-20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>&copy; {CURRENT_YEAR} Vijayan Tech Inc. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link to="/privacy-policy" className="hover:text-slate-300 transition-colors">

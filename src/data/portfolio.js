@@ -13,6 +13,11 @@ import nproject16Img from '../assets/portfolio/nproject16.webp';
 import nproject17Img from '../assets/portfolio/nproject17.webp';
 import nproject18Img from '../assets/portfolio/nproject18.webp';
 import project2Img from '../assets/portfolio/project2.webp';
+import smartSchoolImg from '../assets/images/product-school-erp.jpg';
+import gymProAppImg from '../assets/images/product-gym-pro.jpg';
+import loadTrackerAppImg from '../assets/images/product-load-tracker.jpg';
+import epoojaAppImg from '../assets/images/product-epooja.jpg';
+import classConnectImg from '../assets/images/mobile-project-1.jpg';
 
 export const PORTFOLIO_PROJECTS = [
   {
@@ -134,5 +139,39 @@ export const PORTFOLIO_PROJECTS = [
     description:
       'Sports academy website featuring ground architecture, photo galleries, and video highlights.',
     image: nproject2Img,
+  },
+];
+
+export const MOBILE_APPS = [
+  {
+    name: 'Smart School ERP',
+    category: 'Education / School Management',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vijayantech.smart_school',
+    appStoreUrl: 'https://apps.apple.com/in/app/edu-pulz/id6818633621',
+    image: smartSchoolImg,
+  },
+  {
+    name: 'Parent App for Smart School ERP',
+    category: 'Education / Learning & Communication',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vijayantech.class_connect',
+    image: classConnectImg,
+  },
+  {
+    name: 'Gym Pro',
+    category: 'Fitness & Gym Management',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vijayantech.com.ngym',
+    image: gymProAppImg,
+  },
+  {
+    name: 'Load Tracker',
+    category: 'Logistics & Transportation',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vijayantech.load_tracker',
+    image: loadTrackerAppImg,
+  },
+  {
+    name: 'ePooja Booking',
+    category: 'Religious Services / Online Booking',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vijayantech.pooja',
+    image: epoojaAppImg,
   },
 ];

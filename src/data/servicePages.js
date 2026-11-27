@@ -1,132 +1,121 @@
+import { MOBILE_APPS, PORTFOLIO_PROJECTS } from './portfolio';
+
 import serviceEcommerceImg from '../assets/images/service-ecommerce.jpg';
 import ecommerceWhyImg from '../assets/images/ecommerce-why.jpg';
-import ecommerceP1Img from '../assets/images/ecommerce-p1.jpg';
-import ecommerceP2Img from '../assets/images/ecommerce-p2.jpg';
-import ecommerceP3Img from '../assets/images/ecommerce-p3.jpg';
 
 import serviceWebImg from '../assets/images/service-web.jpg';
 import webWhyImg from '../assets/images/web-why.jpg';
-import webP1Img from '../assets/images/web-p1.jpg';
-import webP2Img from '../assets/images/web-p2.jpg';
-import webP3Img from '../assets/images/web-p3.jpg';
 
 import serviceCloudImg from '../assets/images/service-cloud.jpg';
 import cloudWhyImg from '../assets/images/cloud-why.jpg';
-import cloudP1Img from '../assets/images/cloud-p1.jpg';
-import cloudP2Img from '../assets/images/cloud-p2.jpg';
-import cloudP3Img from '../assets/images/cloud-p3.jpg';
 
 import serviceCustomImg from '../assets/images/service-custom-software.jpg';
 import customWhyImg from '../assets/images/custom-why.jpg';
-import customP1Img from '../assets/images/custom-p1.jpg';
-import customP2Img from '../assets/images/custom-p2.jpg';
-import customP3Img from '../assets/images/custom-p3.jpg';
 
 import serviceMarketingImg from '../assets/images/service-marketing.jpg';
 import marketingWhyImg from '../assets/images/marketing-why.jpg';
-import marketingP1Img from '../assets/images/marketing-p1.jpg';
-import marketingP2Img from '../assets/images/marketing-p2.jpg';
-import marketingP3Img from '../assets/images/marketing-p3.jpg';
 
 import serviceAiImg from '../assets/images/service-ai.jpg';
 import aiWhyImg from '../assets/images/ai-why.jpg';
-import aiP1Img from '../assets/images/ai-p1.jpg';
-import aiP2Img from '../assets/images/ai-p2.jpg';
-import aiP3Img from '../assets/images/ai-p3.jpg';
+
+const portfolioById = Object.fromEntries(PORTFOLIO_PROJECTS.map((item) => [item.id, item]));
+const mobileAppByName = Object.fromEntries(MOBILE_APPS.map((item) => [item.name, item]));
 
 export const SERVICE_PAGES = {
   'ecommerce-solutions': {
-    eyebrow: 'eCommerce Solutions',
+    eyebrow: 'ECOMMERCE DEVELOPMENT',
     metaTitle: 'eCommerce Solutions | Vijayan Tech',
     metaDescription:
-      'We create powerful eCommerce platforms that make online shopping simple, secure, and seamless.',
+      'Create an online store that makes selling simple and shopping effortless. We develop secure, scalable eCommerce platforms with seamless product discovery, checkout, and management experiences.',
     hero: {
       headline: 'Build Your Online Store. Grow Your Business.',
       description:
-        'We create powerful eCommerce platforms that make online shopping simple, secure, and seamless. From product discovery to checkout, we build digital shopping experiences designed to increase engagement and support business growth.',
+        'Create an online store that makes selling simple and shopping effortless. We develop secure, scalable eCommerce platforms with seamless product discovery, checkout, and management experiences.',
       primaryCta: 'Launch Your Online Store',
       secondaryCta: 'Explore Solutions',
       image: serviceEcommerceImg,
       imageAlt: 'Modern eCommerce storefront and online shopping platform',
     },
     overview: {
-      heading: 'Everything Your Business Needs to Sell Online.',
+      heading: 'Complete eCommerce Solutions for Your Business.',
       description:
-        'We provide end-to-end eCommerce development solutions that help businesses establish, manage, and grow their online stores.',
+        'From launching a new online store to improving an existing platform, we build eCommerce solutions that support your products, customers, and business operations.',
       items: [
         {
           iconName: 'ShoppingBag',
           title: 'Custom eCommerce Development',
-          description: 'Tailored online stores built around your business.',
+          description: 'Build tailored online stores around your products and business model.',
         },
         {
           iconName: 'Building2',
-          title: 'B2B & B2C Platforms',
-          description: 'Solutions for business and consumer-focused selling.',
+          title: 'B2B & B2C eCommerce',
+          description: 'Create digital marketplaces for business and consumer transactions.',
         },
         {
           iconName: 'ShoppingCart',
           title: 'Shopping Cart Development',
-          description: 'Smooth and convenient shopping experiences.',
+          description: 'Deliver intuitive cart and checkout experiences.',
         },
         {
           iconName: 'CreditCard',
           title: 'Payment Gateway Integration',
-          description: 'Secure and convenient payment processing.',
+          description: 'Enable secure payment processing through suitable payment providers.',
         },
         {
           iconName: 'Package',
-          title: 'Inventory Management Integration',
-          description: 'Simplify product and stock management.',
+          title: 'Inventory & Order Integration',
+          description: 'Connect stock, orders, and fulfilment workflows.',
         },
         {
           iconName: 'RefreshCw',
-          title: 'eCommerce Website Redesign',
-          description: "Improve your store's design and shopping experience.",
+          title: 'eCommerce Redesign',
+          description: 'Modernise your store with improved usability and functionality.',
         },
       ],
     },
     expertise: {
-      heading: 'Creating Seamless Online Shopping Experiences.',
+      heading: 'Every Detail of Your Store, Connected.',
+      description:
+        'We bring together the essential technologies and functionalities required to create a complete online shopping experience.',
       items: [
-        { iconName: 'Store', label: 'Custom Storefront Development' },
-        { iconName: 'Layers', label: 'Product Catalogue Management' },
-        { iconName: 'ShoppingCart', label: 'Shopping Cart & Checkout' },
-        { iconName: 'CreditCard', label: 'Payment Gateway Integration' },
-        { iconName: 'Package', label: 'Inventory & Order Management' },
-        { iconName: 'Truck', label: 'Shipping & Delivery Integration' },
-        { iconName: 'Users', label: 'Customer Account Management' },
-        { iconName: 'BarChart3', label: 'Sales & Analytics Integration' },
+        { iconName: 'Store', label: 'Custom Storefront Architecture' },
+        { iconName: 'Layers', label: 'Product Catalogue & Variant Management' },
+        { iconName: 'ShoppingCart', label: 'Cart & Checkout Workflows' },
+        { iconName: 'CreditCard', label: 'Payment API Integration' },
+        { iconName: 'Package', label: 'Order & Inventory Synchronisation' },
+        { iconName: 'Truck', label: 'Shipping & Delivery API Integration' },
+        { iconName: 'Users', label: 'Customer Accounts & Authentication' },
+        { iconName: 'BarChart3', label: 'Sales Reporting & Analytics Integration' },
       ],
     },
     whyChoose: {
-      heading: 'Designed to Sell. Built to Scale.',
+      heading: 'Built to Sell. Ready to Scale.',
       image: ecommerceWhyImg,
       imageAlt: 'Online retail checkout and digital commerce experience',
       items: [
         {
-          title: 'Conversion-Focused Design',
-          description: 'Make shopping easier for customers.',
+          title: 'Shopping Experience',
+          description: 'Make product discovery and purchasing simple.',
         },
         {
-          title: 'Secure Transactions',
-          description: 'Integrate suitable payment solutions.',
+          title: 'Reliable Checkout',
+          description: 'Create convenient and dependable payment journeys.',
         },
         {
-          title: 'Easy Management',
-          description: 'Simplify products, orders, and inventory.',
+          title: 'Operational Control',
+          description: 'Manage products, stock, and orders efficiently.',
         },
         {
-          title: 'Mobile Shopping',
-          description: 'Responsive shopping experiences.',
+          title: 'Mobile Commerce',
+          description: 'Deliver consistent experiences across devices.',
         },
         {
-          title: 'Scalable Architecture',
-          description: 'Support business expansion.',
+          title: 'Business Flexibility',
+          description: 'Adapt your store as products and requirements evolve.',
         },
         {
-          title: 'Business Integration',
-          description: 'Connect relevant third-party services.',
+          title: 'Connected Operations',
+          description: 'Integrate the tools and platforms your business needs.',
         },
       ],
     },
@@ -137,43 +126,49 @@ export const SERVICE_PAGES = {
       ctaLabel: 'View Project',
       items: [
         {
-          name: 'AK Fresh Market',
-          category: 'D2C Grocery & Fresh Produce',
+          name: portfolioById['minkavi-books'].title,
+          category: portfolioById['minkavi-books'].category,
           badges: ['B2C Storefront'],
-          image: ecommerceP1Img,
+          image: portfolioById['minkavi-books'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Key Functionalities',
-              text: 'Slot-based local delivery, quick reorder cart, and live inventory sync.',
+              text: portfolioById['minkavi-books'].description,
             },
           ],
           technologies: ['React', 'Node.js', 'Razorpay', 'PostgreSQL'],
         },
         {
-          name: 'A2 Sports Hub',
-          category: 'Apparel & Sporting Goods',
-          badges: ['Omnichannel Retail'],
-          image: ecommerceP2Img,
+          name: portfolioById['jineto-accessories'].title,
+          category: portfolioById['jineto-accessories'].category,
+          badges: ['Retail Storefront'],
+          image: portfolioById['jineto-accessories'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Key Functionalities',
-              text: 'Multi-variant sizing, instant search filtering, and automated GST invoicing.',
+              text: portfolioById['jineto-accessories'].description,
             },
           ],
-          technologies: ['Next.js', 'Shopify Plus', 'Stripe', 'Tailwind CSS'],
+          technologies: ['React', 'Tailwind CSS', 'REST APIs', 'SEO'],
         },
         {
-          name: 'Pacxim Wholesale',
-          category: 'B2B Industrial & Packaging',
+          name: portfolioById['pacxim-packaging'].title,
+          category: portfolioById['pacxim-packaging'].category,
           badges: ['B2B Portal'],
-          image: ecommerceP3Img,
+          image: portfolioById['pacxim-packaging'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Key Functionalities',
-              text: 'Tiered bulk pricing, dealer account portals, and ERP order synchronization.',
+              text: portfolioById['pacxim-packaging'].description,
             },
           ],
-          technologies: ['TypeScript', 'WooCommerce', 'REST APIs', 'Redis'],
+          technologies: ['TypeScript', 'CMS', 'Enquiry Flow', 'Cloudflare'],
         },
       ],
     },
@@ -207,14 +202,14 @@ export const SERVICE_PAGES = {
   },
 
   'website-development': {
-    eyebrow: 'Website Development',
+    eyebrow: 'WEBSITE DEVELOPMENT',
     metaTitle: 'Website Development | Vijayan Tech',
     metaDescription:
-      'We design and develop modern, responsive, and high-performing websites that turn visitors into customers.',
+      'Create a powerful online presence with a website designed around your brand and business goals. We combine thoughtful design, modern development, and reliable performance to turn visitors into customers.',
     hero: {
       headline: 'Websites That Make Your Brand Stand Out.',
       description:
-        'We design and develop modern, responsive, and high-performing websites that turn visitors into customers. From business websites to complex web applications, we create digital experiences that strengthen your brand and accelerate business growth.',
+        'Create a powerful online presence with a website designed around your brand and business goals. We combine thoughtful design, modern development, and reliable performance to turn visitors into customers.',
       primaryCta: 'Start Your Website Project',
       secondaryCta: 'Explore Our Work',
       image: serviceWebImg,
@@ -223,81 +218,83 @@ export const SERVICE_PAGES = {
     overview: {
       heading: 'Complete Website Solutions for Every Business.',
       description:
-        "Your website is more than an online presence. It's your digital identity. We deliver tailored website development solutions that combine creativity, functionality, and performance.",
+        'Whether you need a professional business website or a custom digital platform, we create websites that communicate your brand and support your business objectives.',
       items: [
         {
           iconName: 'Globe',
           title: 'Business Website Development',
-          description: 'Professional websites that establish your brand online.',
+          description: 'Establish your online presence with a professional, engaging website.',
         },
         {
           iconName: 'Building2',
           title: 'Corporate Website Development',
-          description: 'Scalable digital platforms for growing organisations.',
+          description: 'Build structured digital platforms for organisations and enterprises.',
         },
         {
           iconName: 'Code2',
           title: 'Custom Web Application Development',
-          description: 'Powerful web applications designed around your business needs.',
+          description: 'Develop interactive applications tailored to your business workflows.',
         },
         {
           iconName: 'MonitorSmartphone',
           title: 'Responsive Web Design',
-          description: 'Seamless experiences across desktops, tablets, and mobile devices.',
+          description: 'Create seamless experiences across desktops, tablets, and mobile devices.',
         },
         {
           iconName: 'ShoppingBag',
-          title: 'E-commerce Website Development',
-          description: 'User-friendly online stores built to drive sales.',
+          title: 'eCommerce Website Development',
+          description: 'Launch user-friendly online stores for digital selling.',
         },
         {
           iconName: 'Wrench',
           title: 'Website Redesign & Maintenance',
-          description: 'Modernise, optimise, and maintain your existing website.',
+          description: 'Refresh existing websites and keep them performing reliably.',
         },
       ],
     },
     expertise: {
-      heading: 'What Makes a Powerful Website?',
+      heading: 'Everything Behind a High-Performing Website.',
+      description:
+        'From the first interface to the underlying architecture, we build the essential components of a modern website.',
       items: [
-        { iconName: 'Palette', label: 'Modern UI/UX Design' },
-        { iconName: 'MonitorSmartphone', label: 'Responsive & Mobile-First Development' },
-        { iconName: 'Search', label: 'SEO-Friendly Architecture' },
-        { iconName: 'Zap', label: 'High-Speed Performance' },
-        { iconName: 'ShieldCheck', label: 'Secure Development' },
-        { iconName: 'Layers', label: 'Scalable Website Architecture' },
-        { iconName: 'Plug', label: 'Third-Party API Integration' },
-        { iconName: 'FileText', label: 'Content Management Solutions' },
+        { iconName: 'Palette', label: 'UI/UX Design & Prototyping' },
+        { iconName: 'Code2', label: 'Frontend Development' },
+        { iconName: 'Server', label: 'Backend Development' },
+        { iconName: 'MonitorSmartphone', label: 'Responsive & Mobile-First Layouts' },
+        { iconName: 'FileText', label: 'CMS Integration & Management' },
+        { iconName: 'Database', label: 'Database Design & Integration' },
+        { iconName: 'Search', label: 'SEO-Friendly Website Architecture' },
+        { iconName: 'Zap', label: 'Website Speed & Performance Optimisation' },
       ],
     },
     whyChoose: {
-      heading: 'Built for Performance. Designed for People.',
+      heading: 'Designed for People. Built for Performance.',
       image: webWhyImg,
       imageAlt: 'High-speed responsive web engineering',
       items: [
         {
-          title: 'Custom Design',
-          description: 'Every website reflects your brand identity.',
+          title: 'Brand-Led Design',
+          description: 'Reflect your identity through a consistent digital experience.',
         },
         {
-          title: 'User-Focused Experience',
-          description: 'Simple navigation and intuitive interfaces.',
+          title: 'Intuitive Navigation',
+          description: 'Help visitors find information effortlessly.',
         },
         {
-          title: 'Performance Driven',
-          description: 'Optimised loading speed and functionality.',
+          title: 'Performance Optimisation',
+          description: 'Reduce unnecessary loading delays and improve usability.',
         },
         {
-          title: 'SEO Ready',
-          description: 'Structured to support search engine visibility.',
+          title: 'Search Visibility',
+          description: 'Follow SEO-friendly development practices.',
         },
         {
-          title: 'Scalable Solutions',
-          description: 'Built to grow with your business.',
+          title: 'Future-Ready Architecture',
+          description: 'Make room for new features and functionality.',
         },
         {
-          title: 'Reliable Support',
-          description: 'Assistance beyond website launch.',
+          title: 'Ongoing Assistance',
+          description: 'Access maintenance and technical support options.',
         },
       ],
     },
@@ -308,40 +305,46 @@ export const SERVICE_PAGES = {
       ctaLabel: 'View Project',
       items: [
         {
-          name: 'Nobel Power Systems',
-          category: 'Industrial & Energy',
+          name: portfolioById['green-synergy'].title,
+          category: portfolioById['green-synergy'].category,
           badges: ['Corporate Web'],
-          image: webP1Img,
+          image: portfolioById['green-synergy'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Overview',
-              text: 'High-speed corporate flagship with product specification catalogues and dealer enquiry routing.',
+              text: portfolioById['green-synergy'].description,
             },
           ],
           technologies: ['React', 'Tailwind CSS', 'Vite', 'Node.js'],
         },
         {
-          name: 'Bharathidasan Portal',
-          category: 'Higher Education',
-          badges: ['Institutional'],
-          image: webP2Img,
+          name: portfolioById['nobel-power'].title,
+          category: portfolioById['nobel-power'].category,
+          badges: ['Engineering Web'],
+          image: portfolioById['nobel-power'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Overview',
-              text: 'Accessible, mobile-first academic portal streamlining admissions, notices, and department directories.',
+              text: portfolioById['nobel-power'].description,
             },
           ],
-          technologies: ['Next.js', 'TypeScript', 'Headless CMS', 'SEO'],
+          technologies: ['React', 'TypeScript', 'CMS', 'SEO'],
         },
         {
-          name: 'JL Sprockets Global',
-          category: 'Precision Manufacturing',
-          badges: ['B2B Showcase'],
-          image: webP3Img,
+          name: portfolioById['anugraha-school'].title,
+          category: portfolioById['anugraha-school'].category,
+          badges: ['Institutional'],
+          image: portfolioById['anugraha-school'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Overview',
-              text: 'Modernized international product showcase built for rapid page loads and export lead capture.',
+              text: portfolioById['anugraha-school'].description,
             },
           ],
           technologies: ['React', 'PostgreSQL', 'REST API', 'Cloudflare'],
@@ -385,23 +388,23 @@ export const SERVICE_PAGES = {
   },
 
   'cloud-solutions': {
-    eyebrow: 'Cloud Solutions',
+    eyebrow: 'CLOUD SOLUTIONS',
     metaTitle: 'Cloud Solutions | Vijayan Tech',
     metaDescription:
-      'Move beyond traditional infrastructure with flexible, scalable, and reliable cloud solutions.',
+      'Modernise your IT infrastructure with flexible cloud technology. We help businesses migrate workloads, connect applications, and manage cloud environments designed around their operational needs.',
     hero: {
       headline: 'Power Your Business with Smarter Cloud Solutions.',
       description:
-        'Move beyond traditional infrastructure with flexible, scalable, and reliable cloud solutions. We help businesses modernise their IT environments, streamline operations, and access technology without boundaries.',
+        'Modernise your IT infrastructure with flexible cloud technology. We help businesses migrate workloads, connect applications, and manage cloud environments designed around their operational needs.',
       primaryCta: 'Explore Cloud Solutions',
       secondaryCta: 'Talk to Our Experts',
       image: serviceCloudImg,
       imageAlt: 'Cloud computing infrastructure and server architecture',
     },
     overview: {
-      heading: 'Cloud Technology That Moves Your Business Forward.',
+      heading: 'Cloud Infrastructure Built Around Your Needs.',
       description:
-        'We deliver cloud solutions that simplify infrastructure management, improve accessibility, and support business continuity.',
+        'From cloud migration to ongoing infrastructure management, we help businesses adopt and maintain cloud environments that support their operations.',
       items: [
         {
           iconName: 'CloudUpload',
@@ -410,23 +413,23 @@ export const SERVICE_PAGES = {
         },
         {
           iconName: 'Server',
-          title: 'Cloud Infrastructure',
-          description: 'Build flexible and scalable cloud infrastructure.',
+          title: 'Cloud Infrastructure Development',
+          description: 'Design and configure infrastructure for changing business demands.',
         },
         {
           iconName: 'Cloud',
-          title: 'Cloud Application Development',
-          description: 'Develop applications designed for cloud environments.',
+          title: 'Cloud-Native Application Development',
+          description: 'Build applications designed to operate in cloud environments.',
         },
         {
           iconName: 'Database',
           title: 'Cloud Storage & Backup',
-          description: 'Manage and protect business data.',
+          description: 'Implement data storage, backup, and recovery solutions.',
         },
         {
           iconName: 'Plug',
           title: 'Cloud Integration',
-          description: 'Connect applications and systems through cloud technologies.',
+          description: 'Connect cloud applications with existing business systems.',
         },
         {
           iconName: 'Activity',
@@ -436,46 +439,48 @@ export const SERVICE_PAGES = {
       ],
     },
     expertise: {
-      heading: 'Building a Smarter Cloud Infrastructure.',
+      heading: 'Engineering Reliable Cloud Environments.',
+      description:
+        'Our cloud capabilities cover the architecture, deployment, and operational components required to manage modern infrastructure.',
       items: [
-        { iconName: 'Layers', label: 'Cloud Architecture & Planning' },
-        { iconName: 'CloudUpload', label: 'Cloud Migration & Deployment' },
-        { iconName: 'Cloud', label: 'AWS & Microsoft Azure' },
-        { iconName: 'Database', label: 'Cloud Storage & Database Management' },
-        { iconName: 'Settings', label: 'Infrastructure Automation' },
-        { iconName: 'RefreshCw', label: 'Application Modernisation' },
-        { iconName: 'ShieldCheck', label: 'Cloud Security Configuration' },
-        { iconName: 'Activity', label: 'Monitoring & Performance Optimisation' },
+        { iconName: 'Layers', label: 'Cloud Architecture & Infrastructure Planning' },
+        { iconName: 'Cloud', label: 'AWS & Microsoft Azure Implementation' },
+        { iconName: 'CloudUpload', label: 'Cloud Migration & Workload Deployment' },
+        { iconName: 'Database', label: 'Database & Storage Configuration' },
+        { iconName: 'Settings', label: 'Infrastructure as Code & Automation' },
+        { iconName: 'Server', label: 'Application Containerisation' },
+        { iconName: 'ShieldCheck', label: 'Identity & Access Management' },
+        { iconName: 'Activity', label: 'Cloud Monitoring & Cost Optimisation' },
       ],
     },
     whyChoose: {
-      heading: 'Flexible Infrastructure. Limitless Possibilities.',
+      heading: 'Flexible Infrastructure. Greater Business Control.',
       image: cloudWhyImg,
       imageAlt: 'Scalable cloud servers and infrastructure operations',
       items: [
         {
-          title: 'Scalable Infrastructure',
-          description: 'Adapt resources as your business grows.',
+          title: 'Adaptable Resources',
+          description: 'Adjust infrastructure according to workload requirements.',
         },
         {
-          title: 'Improved Accessibility',
-          description: 'Access applications and data from supported devices and locations.',
+          title: 'Anywhere Accessibility',
+          description: 'Enable access to supported applications and resources from different locations.',
         },
         {
-          title: 'Cost Optimisation',
-          description: 'Choose infrastructure based on actual business requirements.',
+          title: 'Resource Efficiency',
+          description: 'Align infrastructure choices with actual usage.',
         },
         {
-          title: 'Reliable Operations',
-          description: 'Design for availability and business continuity.',
+          title: 'Operational Continuity',
+          description: 'Plan for backup, recovery, and service availability.',
         },
         {
-          title: 'Secure Configuration',
-          description: 'Apply appropriate security and access controls.',
+          title: 'Security Management',
+          description: 'Apply suitable access controls and security configurations.',
         },
         {
-          title: 'Expert Assistance',
-          description: 'Get support throughout your cloud journey.',
+          title: 'Ongoing Optimisation',
+          description: 'Improve cloud environments as business requirements change.',
         },
       ],
     },
@@ -486,55 +491,58 @@ export const SERVICE_PAGES = {
       ctaLabel: 'View Project',
       items: [
         {
-          name: 'Multi-Branch ERP Cloud',
-          category: 'AWS Cloud Platform',
-          badges: ['AWS'],
-          image: cloudP1Img,
+          name: mobileAppByName['Smart School ERP'].name,
+          category: mobileAppByName['Smart School ERP'].category,
+          badges: ['Cloud ERP'],
+          image: mobileAppByName['Smart School ERP'].image,
+          to: '/products/school-erp',
           details: [
             {
               label: 'Challenge',
-              text: 'On-premise servers struggled with remote branch access and peak billing loads.',
+              text: 'Schools needed multi-campus cloud access for admissions, attendance, and fee records.',
             },
             {
               label: 'Solution',
-              text: 'Zero-downtime migration to auto-scaling containers with automated daily backups.',
+              text: 'Scalable cloud-hosted ERP uniting web dashboards and mobile apps in real time.',
             },
           ],
-          technologies: ['AWS ECS', 'RDS PostgreSQL', 'Terraform', 'CloudFront'],
+          technologies: ['AWS ECS', 'PostgreSQL', 'Node.js', 'CloudFront'],
         },
         {
-          name: 'SecureDocs Archive',
-          category: 'Microsoft Azure',
-          badges: ['Azure'],
-          image: cloudP2Img,
+          name: mobileAppByName['Parent App for Smart School ERP'].name,
+          category: mobileAppByName['Parent App for Smart School ERP'].category,
+          badges: ['Real-Time Sync'],
+          image: mobileAppByName['Parent App for Smart School ERP'].image,
+          to: '/portfolio',
           details: [
             {
               label: 'Challenge',
-              text: 'Dispersed file storage lacked role-based access control and audit trails.',
+              text: 'Instant delivery of student attendance, homework, and fee alerts to thousands of parents.',
             },
             {
               label: 'Solution',
-              text: 'Centralized encrypted blob storage with identity-based access policies.',
+              text: 'Cloud messaging pipelines and role-based APIs synced with school ERP records.',
             },
           ],
-          technologies: ['Azure Blob', 'Azure AD', 'Docker', 'CI/CD'],
+          technologies: ['Firebase', 'REST APIs', 'Docker', 'CI/CD'],
         },
         {
-          name: 'TelemetryOps Pipeline',
-          category: 'Hybrid Cloud',
-          badges: ['AWS & Docker'],
-          image: cloudP3Img,
+          name: mobileAppByName['Load Tracker'].name,
+          category: mobileAppByName['Load Tracker'].category,
+          badges: ['Cloud Fleet'],
+          image: mobileAppByName['Load Tracker'].image,
+          to: '/products/load-tracker',
           details: [
             {
               label: 'Challenge',
-              text: 'Manual deployments caused downtime and slow incident visibility.',
+              text: 'Dispatch teams lacked centralized visibility across active vehicles and deliveries.',
             },
             {
               label: 'Solution',
-              text: 'Automated GitOps pipelines and real-time health monitoring dashboards.',
+              text: 'Always-on cloud tracking backend synchronizing drivers, loads, and delivery status.',
             },
           ],
-          technologies: ['Kubernetes', 'GitHub Actions', 'Prometheus', 'Node.js'],
+          technologies: ['AWS', 'Go', 'PostgreSQL', 'Cloud Monitoring'],
         },
       ],
     },
@@ -569,14 +577,14 @@ export const SERVICE_PAGES = {
   },
 
   'custom-software-development': {
-    eyebrow: 'Custom Software Development',
+    eyebrow: 'CUSTOM SOFTWARE DEVELOPMENT',
     metaTitle: 'Custom Software Development | Vijayan Tech',
     metaDescription:
-      'We develop custom software solutions that simplify complex workflows, automate operations, and help organisations achieve more with technology.',
+      'Simplify complex operations with software built for the way your business works. We develop tailored applications that connect processes, automate workflows, and address your specific operational challenges.',
     hero: {
       headline: 'Software Solutions Designed Around Your Business.',
       description:
-        'Every business has unique challenges. We develop custom software solutions that simplify complex workflows, automate operations, and help organisations achieve more with technology.',
+        'Simplify complex operations with software built for the way your business works. We develop tailored applications that connect processes, automate workflows, and address your specific operational challenges.',
       primaryCta: 'Build Your Custom Solution',
       secondaryCta: 'Discuss Your Requirements',
       image: serviceCustomImg,
@@ -585,81 +593,83 @@ export const SERVICE_PAGES = {
     overview: {
       heading: 'Software Built Around the Way You Work.',
       description:
-        'From business automation to enterprise applications, we create customised software that aligns with your operational needs and long-term goals.',
+        'Every organisation has different operational needs. We develop custom software that brings your processes, people, and business systems together.',
       items: [
         {
           iconName: 'Building2',
           title: 'Enterprise Software Development',
-          description: 'Build software to manage complex business operations.',
+          description: 'Build business applications for complex organisational operations.',
         },
         {
           iconName: 'Workflow',
           title: 'Business Process Automation',
-          description: 'Reduce repetitive tasks and improve workflows.',
+          description: 'Streamline repetitive tasks and manual workflows.',
         },
         {
           iconName: 'Users',
           title: 'CRM Development',
-          description: 'Organise customer relationships and business interactions.',
+          description: 'Manage customer relationships, interactions, and sales processes.',
         },
         {
           iconName: 'Layers',
           title: 'ERP Solutions',
-          description: 'Connect business processes through integrated management systems.',
+          description: 'Connect business functions through integrated management systems.',
         },
         {
           iconName: 'Plug',
           title: 'API Development & Integration',
-          description: 'Connect applications and streamline data exchange.',
+          description: 'Enable communication between applications and services.',
         },
         {
           iconName: 'RefreshCw',
           title: 'Software Modernisation',
-          description: 'Upgrade existing systems with modern technologies.',
+          description: 'Upgrade legacy applications to meet evolving business requirements.',
         },
       ],
     },
     expertise: {
-      heading: 'Turning Complex Challenges into Simple Solutions.',
+      heading: 'From Business Logic to Working Software.',
+      description:
+        'We combine software engineering and system architecture to create applications that support your day-to-day business operations.',
       items: [
-        { iconName: 'Code2', label: 'Custom Application Development' },
-        { iconName: 'Layers', label: 'Enterprise Software Architecture' },
-        { iconName: 'Building2', label: 'ERP & CRM Development' },
-        { iconName: 'Workflow', label: 'Workflow Automation' },
-        { iconName: 'Database', label: 'Database Design & Management' },
-        { iconName: 'Plug', label: 'API Development & Integration' },
-        { iconName: 'RefreshCw', label: 'Legacy System Modernisation' },
-        { iconName: 'ShieldCheck', label: 'Software Testing & Maintenance' },
+        { iconName: 'Layers', label: 'Custom Application Architecture' },
+        { iconName: 'Code2', label: 'Enterprise Application Development' },
+        { iconName: 'Building2', label: 'ERP & CRM Customisation' },
+        { iconName: 'Workflow', label: 'Workflow & Process Automation' },
+        { iconName: 'Database', label: 'Database Architecture & Management' },
+        { iconName: 'Plug', label: 'REST API Development & Integration' },
+        { iconName: 'RefreshCw', label: 'Legacy Application Modernisation' },
+        { iconName: 'ShieldCheck', label: 'Software Testing & Quality Assurance' },
       ],
     },
     whyChoose: {
-      heading: 'Your Business Needs. Our Technology Expertise.',
+      heading: 'Technology That Solves Real Business Challenges.',
       image: customWhyImg,
       imageAlt: 'Software engineering team collaborating on custom architecture',
       items: [
         {
-          title: 'Tailored Solutions',
-          description: 'Software designed for your specific workflows.',
+          title: 'Purpose-Built Development',
+          description: 'Align software functionality with your actual business processes.',
         },
         {
-          title: 'Business-Focused Development',
-          description: 'Technology aligned with your objectives.',
+          title: 'Operational Efficiency',
+          description: 'Reduce unnecessary manual work through automation.',
         },
         {
-          title: 'Process Automation',
-          description: 'Reduce manual work and repetitive tasks.',
+          title: 'Connected Systems',
+          description: 'Integrate applications and existing business tools.',
         },
         {
-          title: 'Seamless Integration',
-          description: 'Connect with your existing systems.',
+          title: 'Flexible Architecture',
+          description: 'Adapt applications as requirements evolve.',
         },
         {
-          title: 'Scalable Architecture',
-          description: 'Support changing business requirements.',
+          title: 'Reliable Engineering',
+          description: 'Follow structured development and testing practices.',
         },
         {
-          title: 'Long-Term Partnership',
-          description: 'Ongoing technical assistance and improvements.',
+          title: 'Continuous Improvement',
+          description: 'Support future enhancements and technical upgrades.',
         },
       ],
     },
@@ -670,10 +680,11 @@ export const SERVICE_PAGES = {
       ctaLabel: 'View Project',
       items: [
         {
-          name: 'School ERP Suite',
-          category: 'Education Management',
+          name: mobileAppByName['Smart School ERP'].name,
+          category: mobileAppByName['Smart School ERP'].category,
           badges: ['Custom ERP'],
-          image: customP1Img,
+          image: mobileAppByName['Smart School ERP'].image,
+          to: '/products/school-erp',
           details: [
             {
               label: 'Problem',
@@ -684,41 +695,43 @@ export const SERVICE_PAGES = {
               text: 'Role-based admin, automated fee receipts, and instant parent alerts.',
             },
           ],
-          technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
+          technologies: ['React', 'Node.js', 'PostgreSQL', 'Flutter'],
         },
         {
-          name: 'eInvoice Billing Engine',
-          category: 'Finance & Compliance',
-          badges: ['Automation'],
-          image: customP2Img,
+          name: mobileAppByName['Load Tracker'].name,
+          category: mobileAppByName['Load Tracker'].category,
+          badges: ['Logistics System'],
+          image: mobileAppByName['Load Tracker'].image,
+          to: '/products/load-tracker',
           details: [
             {
               label: 'Problem',
-              text: 'Manual GST invoice preparation caused reconciliation delays.',
+              text: 'Manual dispatch logs delayed shipment updates and vehicle coordination.',
             },
             {
               label: 'Custom Features',
-              text: 'One-click compliant e-invoicing, ledger sync, and automated tax summaries.',
+              text: 'End-to-end load assignment, driver tracking, and delivery confirmation reports.',
             },
           ],
-          technologies: ['TypeScript', 'Python', 'REST APIs', 'AWS'],
+          technologies: ['TypeScript', 'React', 'REST APIs', 'AWS'],
         },
         {
-          name: 'Domain & Asset Tracker',
-          category: 'IT Operations',
-          badges: ['Internal Tool'],
-          image: customP3Img,
+          name: mobileAppByName['ePooja Booking'].name,
+          category: mobileAppByName['ePooja Booking'].category,
+          badges: ['Booking Platform'],
+          image: mobileAppByName['ePooja Booking'].image,
+          to: '/products/epooja-booking',
           details: [
             {
               label: 'Problem',
-              text: 'Missed SSL/domain renewals and scattered client hosting records.',
+              text: 'Manual temple pooja reservations and scattered devotee scheduling records.',
             },
             {
               label: 'Custom Features',
-              text: 'Centralized renewal calendar, automated expiry alerts, and audit logs.',
+              text: 'Online seva booking, slot scheduling, digital payments, and admin reporting.',
             },
           ],
-          technologies: ['Go', 'React', 'PostgreSQL', 'Cron Workers'],
+          technologies: ['React', 'Node.js', 'PostgreSQL', 'Payment API'],
         },
       ],
     },
@@ -753,66 +766,68 @@ export const SERVICE_PAGES = {
   },
 
   'digital-marketing': {
-    eyebrow: 'Digital Marketing',
+    eyebrow: 'DIGITAL MARKETING',
     metaTitle: 'Digital Marketing | Vijayan Tech',
     metaDescription:
-      'Creative strategies, data-driven insights, and performance-focused campaigns to strengthen your online presence.',
+      'Build a stronger digital presence with marketing strategies designed around your business goals. We combine search visibility, creative content, targeted campaigns, and performance insights.',
     hero: {
       headline: 'Grow Your Brand. Reach the Right Audience.',
       description:
-        'Make your brand more visible and connect with the customers who matter. Our digital marketing solutions combine creative strategies, data-driven insights, and performance-focused campaigns to strengthen your online presence.',
+        'Build a stronger digital presence with marketing strategies designed around your business goals. We combine search visibility, creative content, targeted campaigns, and performance insights to help your brand attract and engage potential customers.',
       primaryCta: 'Grow Your Business',
       secondaryCta: 'Explore Our Strategies',
       image: serviceMarketingImg,
       imageAlt: 'Digital marketing analytics and growth strategy',
     },
     overview: {
-      heading: 'Everything You Need to Grow Digitally.',
+      heading: 'Strategic Digital Marketing for Business Growth.',
       description:
-        'We help businesses attract, engage, and convert their target audiences through strategic digital marketing solutions.',
+        'We help businesses reach relevant audiences, strengthen their online presence, and generate meaningful customer enquiries through integrated digital marketing.',
       items: [
         {
           iconName: 'Search',
           title: 'Search Engine Optimisation (SEO)',
-          description: 'Improve website visibility and organic search performance.',
+          description: 'Improve organic visibility and attract relevant search traffic.',
         },
         {
           iconName: 'Share2',
           title: 'Social Media Marketing',
-          description: 'Build brand awareness and engage your audience.',
+          description: 'Build brand awareness and meaningful audience engagement.',
         },
         {
           iconName: 'MousePointerClick',
           title: 'Pay-Per-Click Advertising',
-          description: 'Reach potential customers through targeted advertising.',
+          description: 'Reach targeted audiences through paid search and advertising campaigns.',
         },
         {
           iconName: 'FileText',
           title: 'Content Marketing',
-          description: 'Create valuable content that attracts and informs customers.',
+          description: 'Create valuable content that informs, attracts, and engages customers.',
         },
         {
           iconName: 'Mail',
           title: 'Email Marketing',
-          description: 'Build customer relationships through targeted email campaigns.',
+          description: 'Communicate with customers through targeted email campaigns.',
         },
         {
           iconName: 'TrendingUp',
           title: 'Performance Marketing',
-          description: 'Measure campaign results and optimise marketing performance.',
+          description: 'Track campaign outcomes and optimise marketing investments.',
         },
       ],
     },
     expertise: {
-      heading: 'Strategies That Turn Visibility into Growth.',
+      heading: 'Every Channel. One Clear Marketing Direction.',
+      description:
+        'We combine marketing strategy, creative execution, and performance measurement across essential digital channels.',
       items: [
-        { iconName: 'Search', label: 'On-Page & Technical SEO' },
-        { iconName: 'Target', label: 'Keyword Research & Strategy' },
-        { iconName: 'MapPin', label: 'Local SEO' },
-        { iconName: 'Share2', label: 'Social Media Management' },
-        { iconName: 'Megaphone', label: 'Meta & Google Ads' },
-        { iconName: 'FileText', label: 'Content Strategy & Creation' },
-        { iconName: 'Users', label: 'Lead Generation Campaigns' },
+        { iconName: 'Search', label: 'Technical & On-Page SEO' },
+        { iconName: 'Target', label: 'Keyword Research & Search Strategy' },
+        { iconName: 'MapPin', label: 'Local SEO & Business Listings' },
+        { iconName: 'Share2', label: 'Social Media Strategy & Management' },
+        { iconName: 'Megaphone', label: 'Google Ads & Meta Advertising' },
+        { iconName: 'FileText', label: 'Content Planning & Creation' },
+        { iconName: 'Users', label: 'Landing Page & Lead Generation Optimisation' },
         { iconName: 'BarChart3', label: 'Marketing Analytics & Reporting' },
       ],
     },
@@ -822,28 +837,28 @@ export const SERVICE_PAGES = {
       imageAlt: 'Creative digital marketing and campaign planning',
       items: [
         {
-          title: 'Audience-Focused Campaigns',
-          description: 'Reach relevant audiences.',
+          title: 'Audience Relevance',
+          description: 'Focus campaigns on the people most likely to need your services.',
         },
         {
-          title: 'Data-Driven Decisions',
-          description: 'Use performance insights to guide improvements.',
+          title: 'Insight-Led Planning',
+          description: 'Use available data to guide marketing decisions.',
         },
         {
-          title: 'Creative Communication',
-          description: 'Deliver engaging brand messages.',
+          title: 'Consistent Brand Communication',
+          description: 'Maintain a recognisable voice across digital channels.',
         },
         {
-          title: 'Transparent Reporting',
-          description: 'Understand campaign performance.',
+          title: 'Measurable Campaigns',
+          description: 'Track relevant marketing activities and outcomes.',
         },
         {
-          title: 'Continuous Optimisation',
-          description: 'Improve campaigns based on results.',
+          title: 'Ongoing Refinement',
+          description: 'Adjust strategies based on campaign performance.',
         },
         {
-          title: 'Goal-Oriented Strategies',
-          description: 'Align marketing with business objectives.',
+          title: 'Business Alignment',
+          description: 'Connect marketing activities with your business objectives.',
         },
       ],
     },
@@ -851,58 +866,64 @@ export const SERVICE_PAGES = {
       heading: 'Marketing That Makes Your Brand Visible.',
       description:
         'Explore selected marketing campaigns and digital growth initiatives that demonstrate our approach to online visibility, audience engagement, and lead generation.',
-      ctaLabel: 'View Case Study',
+      ctaLabel: 'View Project',
       items: [
         {
-          name: 'Kuppanna Brand Growth',
-          category: 'Regional Search & Social',
+          name: portfolioById['kuppanna-rice'].title,
+          category: portfolioById['kuppanna-rice'].category,
           badges: ['Local SEO', 'Meta Ads'],
-          image: marketingP1Img,
+          image: portfolioById['kuppanna-rice'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Objective',
-              text: 'Increase store footfall and online discovery across key regional markets.',
+              text: portfolioById['kuppanna-rice'].description,
             },
             {
               label: 'Strategy & Metrics',
-              text: 'Local SEO optimization + targeted social reels driving +140% organic map actions.',
+              text: 'Local SEO optimization and regional social campaigns driving stronger retail discovery.',
             },
           ],
           technologies: ['Google Business', 'Meta Ads', 'GA4', 'Local SEO'],
         },
         {
-          name: 'Kamadhenu Admissions',
-          category: 'Lead Generation Campaign',
+          name: portfolioById['akm-academy'].title,
+          category: portfolioById['akm-academy'].category,
           badges: ['Google Ads', 'SEO'],
-          image: marketingP2Img,
+          image: portfolioById['akm-academy'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Objective',
-              text: 'Generate qualified parent enquiries during peak academic admission cycles.',
+              text: portfolioById['akm-academy'].description,
             },
             {
               label: 'Strategy & Metrics',
-              text: 'High-intent search campaigns & landing page CRO achieving 3.2x enquiry volume.',
+              text: 'High-intent search campaigns and landing page optimization for student enquiries.',
             },
           ],
           technologies: ['Google Ads', 'Search Console', 'Landing CRO', 'Analytics'],
         },
         {
-          name: 'Minkavi D2C Launch',
-          category: 'Performance & Content',
+          name: portfolioById['a2-sports-academy'].title,
+          category: portfolioById['a2-sports-academy'].category,
           badges: ['Performance'],
-          image: marketingP3Img,
+          image: portfolioById['a2-sports-academy'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Objective',
-              text: 'Build brand awareness and scale direct-to-consumer online orders.',
+              text: portfolioById['a2-sports-academy'].description,
             },
             {
               label: 'Strategy & Metrics',
-              text: 'Full-funnel retargeting and email automation delivering 38% repeat buyer rate.',
+              text: 'Visual social storytelling and targeted local campaigns boosting academy registrations.',
             },
           ],
-          technologies: ['Meta Pixel', 'Email Flows', 'Content Strategy', 'Looker Studio'],
+          technologies: ['Meta Pixel', 'Content Strategy', 'Local SEO', 'Analytics'],
         },
       ],
     },
@@ -936,97 +957,99 @@ export const SERVICE_PAGES = {
   },
 
   'ai-solutions': {
-    eyebrow: 'AI Solutions',
+    eyebrow: 'ARTIFICIAL INTELLIGENCE',
     metaTitle: 'AI Solutions | Vijayan Tech',
     metaDescription:
-      'We develop AI-powered solutions that automate processes, simplify decision-making, and enhance customer experiences.',
+      'Bring intelligence into your business with practical AI applications. We develop and integrate AI-powered technologies that automate tasks, simplify information processing, and help teams make more informed decisions.',
     hero: {
-      headline: 'Make Your Business Smarter with AI-Powered Solutions.',
+      headline: 'Turn Business Challenges into Intelligent Solutions.',
       description:
-        'Transform the way your business works with intelligent technology. We develop AI-powered solutions that automate processes, simplify decision-making, enhance customer experiences, and unlock new opportunities for innovation.',
+        'Bring intelligence into your business with practical AI applications. We develop and integrate AI-powered technologies that automate tasks, simplify information processing, and help teams make more informed decisions.',
       primaryCta: 'Explore AI Solutions',
       secondaryCta: 'Discuss Your AI Idea',
       image: serviceAiImg,
       imageAlt: 'Artificial intelligence and intelligent automation systems',
     },
     overview: {
-      heading: 'Intelligent Solutions for a Smarter Future.',
+      heading: 'Practical AI Solutions for Modern Businesses.',
       description:
-        'We help businesses explore and implement artificial intelligence through practical, customised solutions that address real-world challenges.',
+        'From intelligent applications to workflow automation, we help businesses identify and implement AI capabilities that address real operational needs.',
       items: [
         {
           iconName: 'Cpu',
           title: 'AI Application Development',
-          description: 'Build intelligent applications tailored to business requirements.',
+          description: 'Build intelligent applications around specific business requirements.',
         },
         {
           iconName: 'MessageSquare',
           title: 'AI Chatbot Development',
-          description: 'Create conversational assistants for customer interactions.',
+          description: 'Create conversational assistants for customer and internal support.',
         },
         {
           iconName: 'Sparkles',
           title: 'Generative AI Integration',
-          description: 'Integrate generative AI capabilities into business applications.',
+          description: 'Incorporate generative AI capabilities into existing applications and workflows.',
         },
         {
           iconName: 'BrainCircuit',
           title: 'Machine Learning Solutions',
-          description: 'Develop models that learn from relevant data.',
+          description: 'Develop data-driven models for suitable prediction and classification tasks.',
         },
         {
           iconName: 'Workflow',
-          title: 'Business Process Automation',
-          description: 'Automate repetitive and time-consuming workflows.',
+          title: 'AI Workflow Automation',
+          description: 'Streamline repetitive processes using appropriate AI technologies.',
         },
         {
           iconName: 'Lightbulb',
-          title: 'AI Integration & Consulting',
-          description: 'Identify suitable AI opportunities and implementation strategies.',
+          title: 'AI Consulting & Integration',
+          description: 'Identify relevant AI opportunities and plan practical implementations.',
         },
       ],
     },
     expertise: {
-      heading: 'Bringing Intelligence into Everyday Business.',
+      heading: 'Connecting Data, Intelligence, and Automation.',
+      description:
+        'We work with AI technologies to develop applications that process information, support interactions, and improve business workflows.',
       items: [
-        { iconName: 'Cpu', label: 'Artificial Intelligence Integration' },
-        { iconName: 'Sparkles', label: 'Generative AI Applications' },
-        { iconName: 'MessageSquare', label: 'AI Chatbot Development' },
-        { iconName: 'BrainCircuit', label: 'Machine Learning' },
+        { iconName: 'Cpu', label: 'Large Language Model (LLM) Integration' },
+        { iconName: 'Sparkles', label: 'Generative AI Application Development' },
+        { iconName: 'Database', label: 'Retrieval-Augmented Generation (RAG)' },
+        { iconName: 'MessageSquare', label: 'AI Chatbot & Virtual Assistant Development' },
+        { iconName: 'BrainCircuit', label: 'Machine Learning Model Integration' },
         { iconName: 'FileText', label: 'Natural Language Processing' },
-        { iconName: 'Workflow', label: 'Intelligent Workflow Automation' },
-        { iconName: 'BarChart3', label: 'AI-Powered Data Analysis' },
-        { iconName: 'Plug', label: 'API & Third-Party AI Integration' },
+        { iconName: 'Workflow', label: 'Intelligent Document Processing' },
+        { iconName: 'Plug', label: 'AI APIs & Third-Party Integration' },
       ],
     },
     whyChoose: {
-      heading: 'Innovation That Creates Real Business Value.',
+      heading: 'AI That Creates Meaningful Business Value.',
       image: aiWhyImg,
       imageAlt: 'Applied artificial intelligence and automation engineering',
       items: [
         {
-          title: 'Practical AI Applications',
-          description: 'Focus on solving actual business challenges.',
+          title: 'Problem-First Approach',
+          description: 'Identify where AI can genuinely improve business operations.',
         },
         {
-          title: 'Custom AI Solutions',
-          description: 'Build around your workflows and requirements.',
+          title: 'Purposeful Automation',
+          description: 'Apply intelligence to suitable repetitive tasks.',
         },
         {
-          title: 'Smarter Automation',
-          description: 'Reduce repetitive manual activities.',
+          title: 'Context-Aware Solutions',
+          description: 'Connect AI applications with relevant business information.',
         },
         {
-          title: 'Improved Productivity',
-          description: 'Help teams work more efficiently.',
-        },
-        {
-          title: 'Scalable Integration',
-          description: 'Connect AI capabilities with suitable existing systems.',
+          title: 'System Integration',
+          description: 'Integrate AI capabilities into compatible existing platforms.',
         },
         {
           title: 'Responsible Implementation',
           description: 'Consider privacy, security, accuracy, and human oversight.',
+        },
+        {
+          title: 'Adaptable Solutions',
+          description: 'Design applications that can evolve with changing requirements.',
         },
       ],
     },
@@ -1037,55 +1060,59 @@ export const SERVICE_PAGES = {
       ctaLabel: 'View Project',
       items: [
         {
-          name: 'SupportDesk AI Assistant',
-          category: 'Conversational AI',
-          badges: ['AI Chatbot'],
-          image: aiP1Img,
+          name: mobileAppByName['Smart School ERP'].name,
+          category: mobileAppByName['Smart School ERP'].category,
+          badges: ['Smart Analytics'],
+          image: mobileAppByName['Smart School ERP'].image,
+          to: '/products/school-erp',
           details: [
             {
               label: 'Challenge',
-              text: 'High volume of repetitive customer support queries delayed response times.',
+              text: 'Administrators needed faster insights from attendance, exam results, and fee data.',
             },
             {
               label: 'AI Capabilities',
-              text: 'Context-aware knowledge retrieval with seamless human agent handoff.',
+              text: 'Automated student performance summaries and smart parent communication workflows.',
             },
           ],
-          technologies: ['Python', 'LLM APIs', 'Vector DB', 'React'],
+          technologies: ['Python', 'Node.js', 'PostgreSQL', 'React'],
         },
         {
-          name: 'DocuParse Automation',
-          category: 'Document Intelligence',
-          badges: ['Workflow AI'],
-          image: aiP2Img,
+          name: mobileAppByName['Load Tracker'].name,
+          category: mobileAppByName['Load Tracker'].category,
+          badges: ['Route Intelligence'],
+          image: mobileAppByName['Load Tracker'].image,
+          to: '/products/load-tracker',
           details: [
             {
               label: 'Challenge',
-              text: 'Manual data entry from invoices and PDFs slowed down finance teams.',
+              text: 'Dispatch teams needed smarter load allocation and delivery ETA visibility.',
             },
             {
               label: 'AI Capabilities',
-              text: 'Automated field extraction, validation rules, and direct ERP export.',
+              text: 'Predictive delivery timelines, anomaly alerts, and automated fleet reporting.',
             },
           ],
-          technologies: ['Python', 'OCR', 'FastAPI', 'PostgreSQL'],
+          technologies: ['Python', 'FastAPI', 'REST APIs', 'PostgreSQL'],
         },
         {
-          name: 'DemandSense Forecaster',
-          category: 'Predictive Analytics',
-          badges: ['Machine Learning'],
-          image: aiP3Img,
+          name: portfolioById['minkavi-books'].title,
+          category: portfolioById['minkavi-books'].category,
+          badges: ['Smart Search'],
+          image: portfolioById['minkavi-books'].image,
+          imagePosition: 'object-top',
+          to: '/portfolio',
           details: [
             {
               label: 'Challenge',
-              text: 'Seasonal stockouts and over-ordering impacted retail margins.',
+              text: 'Large catalog discovery across thousands of book titles and academic categories.',
             },
             {
               label: 'AI Capabilities',
-              text: 'Historical sales trend modeling and automated reorder recommendations.',
+              text: 'Intelligent search ranking, category tagging, and personalized book recommendations.',
             },
           ],
-          technologies: ['PyTorch', 'Scikit-Learn', 'Vertex AI', 'REST API'],
+          technologies: ['React', 'Search Indexing', 'Recommendation Engine', 'REST API'],
         },
       ],
     },
