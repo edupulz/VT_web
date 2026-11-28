@@ -189,10 +189,10 @@ export default function Footer() {
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#2563EB] shrink-0" />
                 <a
-                  href="mailto:sales@vijayantech.com"
+                  href="mailto:support@vijayantech.com"
                   className="hover:text-white transition-colors"
                 >
-                  sales@vijayantech.com
+                  support@vijayantech.com
                 </a>
               </div>
 

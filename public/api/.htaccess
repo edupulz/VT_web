@@ -1,0 +1,16 @@
+# Security rules for Contact API directory (Apache 2.4+ / shared hosting)
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+<FilesMatch "(^\.|composer\.(json|lock)$|^(config|mail-config).*\.php$|\.(env|ini|log|md|sh|sql)$)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+Options -Indexes

@@ -8,6 +8,7 @@ export default function ActionButton({
   type = 'button',
   variant = 'primary',
   arrow = 'right',
+  disabled = false,
   className = '',
   children,
 }) {
@@ -23,14 +24,17 @@ export default function ActionButton({
     ? 'text-white group-hover:text-[#93C5FD]'
     : 'text-[#101828] group-hover:text-white';
 
-  const classes = `group relative overflow-hidden inline-flex items-center justify-center gap-2.5 rounded-[3px] font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 ${baseClasses} ${className}`;
+  const disabledClasses = disabled ? 'opacity-75 cursor-not-allowed pointer-events-none' : '';
+  const classes = `group relative overflow-hidden inline-flex items-center justify-center gap-2.5 rounded-[3px] font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 ${baseClasses} ${disabledClasses} ${className}`;
 
   const content = (
     <>
-      <span
-        aria-hidden="true"
-        className={`absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out ${sweepBg}`}
-      />
+      {!disabled && (
+        <span
+          aria-hidden="true"
+          className={`absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out ${sweepBg}`}
+        />
+      )}
       <span className="relative z-10 inline-flex items-center gap-2.5">
         {arrow === 'left' && (
           <ArrowLeft
@@ -38,7 +42,7 @@ export default function ActionButton({
             aria-hidden="true"
           />
         )}
-        <span>{children}</span>
+        <span className="inline-flex items-center gap-2.5">{children}</span>
         {arrow === 'right' && (
           <ArrowRight
             className={`w-4 h-4 transition-all duration-300 group-hover:translate-x-1.5 ${arrowColor}`}
@@ -66,7 +70,7 @@ export default function ActionButton({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} disabled={disabled} aria-disabled={disabled} className={classes}>
       {content}
     </button>
   );

@@ -12,6 +12,17 @@ dist
 dist-ssr
 *.local
 
+# Environment and server-side secrets
+.env
+.env.*
+!.env.example
+vendor/
+public/api/vendor/
+public/api/config.php
+public/api/mail-config.php
+server/mail-config.php
+!server/mail-config.example.php
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
