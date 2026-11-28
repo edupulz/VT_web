@@ -140,11 +140,7 @@ export default function ProductDetailPage() {
                   aria-hidden="true"
                 />
 
-                <div className="relative z-10 p-7 flex flex-col justify-between flex-1">
-                  <div className="w-11 h-11 rounded-none bg-white/10 backdrop-blur-sm border border-white/15 text-white flex items-center justify-center">
-                    <Icon name={mod.iconName} className="w-5 h-5" />
-                  </div>
-
+                <div className="relative z-10 p-7 flex flex-col justify-end flex-1">
                   <div className="mt-auto pt-6">
                     <h3 className="font-display text-xl font-semibold text-white">
                       {mod.title}

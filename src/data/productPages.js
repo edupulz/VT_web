@@ -12,6 +12,49 @@ import gymProWhyImg from '../assets/images/product-why-gym-pro.jpg';
 import domainTrackerImg from '../assets/images/product-domain-tracker.jpg';
 import domainTrackerWhyImg from '../assets/images/product-why-domain-tracker.jpg';
 
+import schoolErp01Img from '../assets/images/modules/school-erp-01-admissions.jpg';
+import schoolErp02Img from '../assets/images/modules/school-erp-02-attendance.jpg';
+import schoolErp03Img from '../assets/images/modules/school-erp-03-examination.jpg';
+import schoolErp04Img from '../assets/images/modules/school-erp-04-fees.jpg';
+import schoolErp05Img from '../assets/images/modules/school-erp-05-staff-hr.jpg';
+import schoolErp06Img from '../assets/images/modules/school-erp-06-parent-comm.jpg';
+import epooja01Img from '../assets/images/modules/epooja-01-seva.jpg';
+import epooja02Img from '../assets/images/modules/epooja-02-online-booking.jpg';
+import epooja03Img from '../assets/images/modules/epooja-03-devotee.jpg';
+import epooja04Img from '../assets/images/modules/epooja-04-schedule.jpg';
+import epooja05Img from '../assets/images/modules/epooja-05-payment.jpg';
+import epooja06Img from '../assets/images/modules/epooja-06-admin.jpg';
+import einvoice01Img from '../assets/images/modules/einvoice-01-creation.jpg';
+import einvoice02Img from '../assets/images/modules/einvoice-02-customer.jpg';
+import einvoice03Img from '../assets/images/modules/einvoice-03-products.jpg';
+import einvoice04Img from '../assets/images/modules/einvoice-04-tax.jpg';
+import einvoice05Img from '../assets/images/modules/einvoice-05-payment.jpg';
+import einvoice06Img from '../assets/images/modules/einvoice-06-reports.jpg';
+import loadTracker01Img from '../assets/images/modules/load-tracker-01-load.jpg';
+import loadTracker02Img from '../assets/images/modules/load-tracker-02-tracking.jpg';
+import loadTracker03Img from '../assets/images/modules/load-tracker-03-vehicle.jpg';
+import loadTracker04Img from '../assets/images/modules/load-tracker-04-driver.jpg';
+import loadTracker05Img from '../assets/images/modules/load-tracker-05-delivery.jpg';
+import loadTracker06Img from '../assets/images/modules/load-tracker-06-reports.jpg';
+import jobPortal01Img from '../assets/images/modules/job-portal-01-listing.jpg';
+import jobPortal02Img from '../assets/images/modules/job-portal-02-candidate.jpg';
+import jobPortal03Img from '../assets/images/modules/job-portal-03-search.jpg';
+import jobPortal04Img from '../assets/images/modules/job-portal-04-application.jpg';
+import jobPortal05Img from '../assets/images/modules/job-portal-05-employer.jpg';
+import jobPortal06Img from '../assets/images/modules/job-portal-06-admin.jpg';
+import gymPro01Img from '../assets/images/modules/gym-pro-01-member.jpg';
+import gymPro02Img from '../assets/images/modules/gym-pro-02-membership.jpg';
+import gymPro03Img from '../assets/images/modules/gym-pro-03-trainer.jpg';
+import gymPro04Img from '../assets/images/modules/gym-pro-04-attendance.jpg';
+import gymPro05Img from '../assets/images/modules/gym-pro-05-payment.jpg';
+import gymPro06Img from '../assets/images/modules/gym-pro-06-reports.jpg';
+import domainTracker01Img from '../assets/images/modules/domain-tracker-01-portfolio.jpg';
+import domainTracker02Img from '../assets/images/modules/domain-tracker-02-expiry.jpg';
+import domainTracker03Img from '../assets/images/modules/domain-tracker-03-renewal.jpg';
+import domainTracker04Img from '../assets/images/modules/domain-tracker-04-registrar.jpg';
+import domainTracker05Img from '../assets/images/modules/domain-tracker-05-status.jpg';
+import domainTracker06Img from '../assets/images/modules/domain-tracker-06-reports.jpg';
+
 export const PRODUCT_PAGES = {
   'school-erp': {
     eyebrow: 'School ERP',
@@ -53,6 +96,7 @@ export const PRODUCT_PAGES = {
           number: '01',
           iconName: 'Users',
           title: 'Student & Admission Management',
+          image: schoolErp01Img,
           description:
             'Simplify student enrolment and maintain complete student profiles throughout their academic journey.',
           features: [
@@ -66,6 +110,7 @@ export const PRODUCT_PAGES = {
           number: '02',
           iconName: 'Layers',
           title: 'Attendance & Academic Management',
+          image: schoolErp02Img,
           description:
             'Organise classroom activities and monitor student participation through structured academic management tools.',
           features: [
@@ -79,6 +124,7 @@ export const PRODUCT_PAGES = {
           number: '03',
           iconName: 'FileText',
           title: 'Examination Management',
+          image: schoolErp03Img,
           description:
             'Organise examination activities and simplify the process of recording, reviewing, and managing student performance.',
           features: [
@@ -92,6 +138,7 @@ export const PRODUCT_PAGES = {
           number: '04',
           iconName: 'CreditCard',
           title: 'Fee Management',
+          image: schoolErp04Img,
           description:
             'Keep school financial administration organised with structured fee records and payment tracking.',
           features: [
@@ -105,6 +152,7 @@ export const PRODUCT_PAGES = {
           number: '05',
           iconName: 'Building2',
           title: 'Staff & HR Management',
+          image: schoolErp05Img,
           description:
             'Simplify employee administration and maintain organised staff information through one management system.',
           features: [
@@ -118,6 +166,7 @@ export const PRODUCT_PAGES = {
           number: '06',
           iconName: 'MessageSquare',
           title: 'Parent Communication',
+          image: schoolErp06Img,
           description:
             'Build stronger connections between schools and families through accessible student updates and communication tools.',
           features: [
@@ -167,7 +216,7 @@ export const PRODUCT_PAGES = {
       ],
     },
     whyChoose: {
-      eyebrow: 'Why Choose School ERP?',
+      eyebrow: 'Why Choose Our Product',
       heading: 'Technology That Moves Your School Forward.',
       description:
         'Every school has its own way of working. School ERP provides a flexible digital environment that brings essential management functions together while supporting the different responsibilities of your institution.',
@@ -294,6 +343,7 @@ export const PRODUCT_PAGES = {
           number: '01',
           iconName: 'Sparkles',
           title: 'Pooja & Seva Management',
+          image: epooja01Img,
           description:
             'Organise different temple rituals and religious services with structured service information.',
           features: [
@@ -307,6 +357,7 @@ export const PRODUCT_PAGES = {
           number: '02',
           iconName: 'Globe',
           title: 'Online Booking Management',
+          image: epooja02Img,
           description:
             'Allow devotees to explore available services and submit booking requests conveniently.',
           features: [
@@ -320,6 +371,7 @@ export const PRODUCT_PAGES = {
           number: '03',
           iconName: 'Users',
           title: 'Devotee Management',
+          image: epooja03Img,
           description:
             'Maintain devotee information and access booking-related details through organised records.',
           features: [
@@ -333,6 +385,7 @@ export const PRODUCT_PAGES = {
           number: '04',
           iconName: 'Layers',
           title: 'Schedule Management',
+          image: epooja04Img,
           description:
             'Coordinate pooja schedules and manage service availability effectively.',
           features: [
@@ -346,6 +399,7 @@ export const PRODUCT_PAGES = {
           number: '05',
           iconName: 'CreditCard',
           title: 'Payment Management',
+          image: epooja05Img,
           description:
             'Organise booking-related financial transactions and maintain payment records.',
           features: [
@@ -359,6 +413,7 @@ export const PRODUCT_PAGES = {
           number: '06',
           iconName: 'BarChart3',
           title: 'Administration & Reporting',
+          image: epooja06Img,
           description:
             'Manage platform activities and monitor booking information through an administrative dashboard.',
           features: [
@@ -404,7 +459,7 @@ export const PRODUCT_PAGES = {
       ],
     },
     whyChoose: {
-      eyebrow: 'Why Choose ePooja Booking?',
+      eyebrow: 'Why Choose Our Product',
       heading: 'Connecting Tradition with Digital Convenience.',
       description:
         'Religious services deserve a booking experience that is simple, accessible, and well organised. ePooja Booking combines essential reservation and administration tools to support the evolving needs of temples and devotees.',
@@ -529,6 +584,7 @@ export const PRODUCT_PAGES = {
           number: '01',
           iconName: 'FileText',
           title: 'Invoice Creation & Management',
+          image: einvoice01Img,
           description:
             'Create professional invoices and maintain billing information in an organised format.',
           features: [
@@ -542,6 +598,7 @@ export const PRODUCT_PAGES = {
           number: '02',
           iconName: 'Users',
           title: 'Customer Management',
+          image: einvoice02Img,
           description:
             'Maintain customer details and access billing information through organised customer records.',
           features: [
@@ -555,6 +612,7 @@ export const PRODUCT_PAGES = {
           number: '03',
           iconName: 'Package',
           title: 'Product & Service Management',
+          image: einvoice03Img,
           description: 'Organise the products and services used in your billing process.',
           features: [
             'Product Management',
@@ -567,6 +625,7 @@ export const PRODUCT_PAGES = {
           number: '04',
           iconName: 'Settings',
           title: 'Tax & Billing Management',
+          image: einvoice04Img,
           description:
             'Manage applicable tax information and billing details according to business requirements.',
           features: [
@@ -580,6 +639,7 @@ export const PRODUCT_PAGES = {
           number: '05',
           iconName: 'CreditCard',
           title: 'Payment Management',
+          image: einvoice05Img,
           description: 'Monitor invoice payments and maintain transaction-related information.',
           features: [
             'Payment Status Tracking',
@@ -592,6 +652,7 @@ export const PRODUCT_PAGES = {
           number: '06',
           iconName: 'BarChart3',
           title: 'Reports & Analytics',
+          image: einvoice06Img,
           description: 'Review billing activities and access organised financial information.',
           features: [
             'Sales Reports',
@@ -636,7 +697,7 @@ export const PRODUCT_PAGES = {
       ],
     },
     whyChoose: {
-      eyebrow: 'Why Choose eInvoice?',
+      eyebrow: 'Why Choose Our Product',
       heading: 'A Simpler Way to Manage Business Billing.',
       description:
         'Your business needs more than a basic invoice generator. eInvoice provides an organised billing environment that helps manage customer information, invoice records, and payment activities with ease.',
@@ -759,6 +820,7 @@ export const PRODUCT_PAGES = {
           number: '01',
           iconName: 'Package',
           title: 'Load Management',
+          image: loadTracker01Img,
           description:
             'Create and manage load assignments while maintaining essential shipment information.',
           features: [
@@ -772,6 +834,7 @@ export const PRODUCT_PAGES = {
           number: '02',
           iconName: 'MapPin',
           title: 'Shipment Tracking',
+          image: loadTracker02Img,
           description:
             'Monitor shipment progress and maintain visibility throughout the delivery process.',
           features: [
@@ -785,6 +848,7 @@ export const PRODUCT_PAGES = {
           number: '03',
           iconName: 'Truck',
           title: 'Vehicle Management',
+          image: loadTracker03Img,
           description: 'Maintain vehicle information and organise transportation resources.',
           features: [
             'Vehicle Registration',
@@ -797,6 +861,7 @@ export const PRODUCT_PAGES = {
           number: '04',
           iconName: 'Users',
           title: 'Driver Management',
+          image: loadTracker04Img,
           description: 'Organise driver information and maintain load-related assignment details.',
           features: [
             'Driver Profiles',
@@ -809,6 +874,7 @@ export const PRODUCT_PAGES = {
           number: '05',
           iconName: 'Activity',
           title: 'Delivery Management',
+          image: loadTracker05Img,
           description:
             'Manage delivery information and monitor the progress of transportation activities.',
           features: [
@@ -822,6 +888,7 @@ export const PRODUCT_PAGES = {
           number: '06',
           iconName: 'BarChart3',
           title: 'Reports & Analytics',
+          image: loadTracker06Img,
           description:
             'Review transportation activities and access operational information through organised reports.',
           features: [
@@ -868,7 +935,7 @@ export const PRODUCT_PAGES = {
       ],
     },
     whyChoose: {
-      eyebrow: 'Why Choose Load Tracker?',
+      eyebrow: 'Why Choose Our Product',
       heading: 'Built for Greater Control Over Every Load.',
       description:
         'Every delivery matters. Load Tracker provides a structured management environment that helps transportation businesses coordinate their resources, maintain shipment information, and monitor daily logistics activities.',
@@ -990,6 +1057,7 @@ export const PRODUCT_PAGES = {
           number: '01',
           iconName: 'FileText',
           title: 'Job Listing Management',
+          image: jobPortal01Img,
           description:
             'Publish and organise job opportunities with clear descriptions and requirements.',
           features: [
@@ -1003,6 +1071,7 @@ export const PRODUCT_PAGES = {
           number: '02',
           iconName: 'Users',
           title: 'Candidate Management',
+          image: jobPortal02Img,
           description:
             'Help job seekers create professional profiles and maintain their career information.',
           features: [
@@ -1016,6 +1085,7 @@ export const PRODUCT_PAGES = {
           number: '03',
           iconName: 'Search',
           title: 'Job Search & Discovery',
+          image: jobPortal03Img,
           description:
             'Make it easier for candidates to discover relevant employment opportunities.',
           features: [
@@ -1029,6 +1099,7 @@ export const PRODUCT_PAGES = {
           number: '04',
           iconName: 'Activity',
           title: 'Application Management',
+          image: jobPortal04Img,
           description:
             'Organise job applications and maintain visibility into candidate progress.',
           features: [
@@ -1042,6 +1113,7 @@ export const PRODUCT_PAGES = {
           number: '05',
           iconName: 'Building2',
           title: 'Employer Management',
+          image: jobPortal05Img,
           description:
             'Provide employers with tools to manage company information and recruitment activities.',
           features: [
@@ -1055,6 +1127,7 @@ export const PRODUCT_PAGES = {
           number: '06',
           iconName: 'BarChart3',
           title: 'Admin & Reporting',
+          image: jobPortal06Img,
           description:
             'Manage platform activities and maintain visibility into recruitment operations.',
           features: [
@@ -1101,7 +1174,7 @@ export const PRODUCT_PAGES = {
       ],
     },
     whyChoose: {
-      eyebrow: 'Why Choose Job Portal?',
+      eyebrow: 'Why Choose Our Product',
       heading: 'A Smarter Way to Bring Employers and Talent Together.',
       description:
         'Successful recruitment starts with the right connection. Job Portal provides a structured digital environment that supports employers, candidates, and administrators throughout the recruitment journey.',
@@ -1224,6 +1297,7 @@ export const PRODUCT_PAGES = {
           number: '01',
           iconName: 'Users',
           title: 'Member Management',
+          image: gymPro01Img,
           description:
             'Maintain member information and organise registrations through a centralised system.',
           features: [
@@ -1237,6 +1311,7 @@ export const PRODUCT_PAGES = {
           number: '02',
           iconName: 'Layers',
           title: 'Membership Management',
+          image: gymPro02Img,
           description: "Create and manage membership plans based on your gym's offerings.",
           features: [
             'Membership Plans',
@@ -1249,6 +1324,7 @@ export const PRODUCT_PAGES = {
           number: '03',
           iconName: 'Building2',
           title: 'Trainer & Staff Management',
+          image: gymPro03Img,
           description:
             'Organise trainer and employee information while managing their responsibilities.',
           features: [
@@ -1262,6 +1338,7 @@ export const PRODUCT_PAGES = {
           number: '04',
           iconName: 'Activity',
           title: 'Attendance Management',
+          image: gymPro04Img,
           description: 'Monitor member visits and maintain organised attendance records.',
           features: [
             'Member Check-In',
@@ -1274,6 +1351,7 @@ export const PRODUCT_PAGES = {
           number: '05',
           iconName: 'CreditCard',
           title: 'Payment Management',
+          image: gymPro05Img,
           description:
             'Manage membership payments and maintain financial transaction information.',
           features: [
@@ -1287,6 +1365,7 @@ export const PRODUCT_PAGES = {
           number: '06',
           iconName: 'BarChart3',
           title: 'Reports & Dashboard',
+          image: gymPro06Img,
           description:
             "Get an organised overview of your gym's daily activities and membership performance.",
           features: [
@@ -1331,7 +1410,7 @@ export const PRODUCT_PAGES = {
       ],
     },
     whyChoose: {
-      eyebrow: 'Why Choose Gym Pro?',
+      eyebrow: 'Why Choose Our Product',
       heading: 'Smart Management for Stronger Fitness Businesses.',
       description:
         'Your gym deserves a management solution that works as hard as your members do. Gym Pro combines essential fitness business management tools into one accessible platform designed to simplify operations and support business development.',
@@ -1455,6 +1534,7 @@ export const PRODUCT_PAGES = {
           number: '01',
           iconName: 'Database',
           title: 'Domain Portfolio Management',
+          image: domainTracker01Img,
           description: 'Maintain a structured record of your registered domain names.',
           features: [
             'Domain Registration Records',
@@ -1467,6 +1547,7 @@ export const PRODUCT_PAGES = {
           number: '02',
           iconName: 'Activity',
           title: 'Expiry Date Monitoring',
+          image: domainTracker02Img,
           description:
             'Keep track of domain expiry dates and stay informed about upcoming renewals.',
           features: [
@@ -1480,6 +1561,7 @@ export const PRODUCT_PAGES = {
           number: '03',
           iconName: 'RefreshCw',
           title: 'Renewal Management',
+          image: domainTracker03Img,
           description:
             'Organise renewal schedules and maintain visibility into domain renewal activities.',
           features: [
@@ -1493,6 +1575,7 @@ export const PRODUCT_PAGES = {
           number: '04',
           iconName: 'Globe',
           title: 'Registrar Management',
+          image: domainTracker04Img,
           description:
             'Maintain information about domain registrars and related registration details.',
           features: [
@@ -1506,6 +1589,7 @@ export const PRODUCT_PAGES = {
           number: '05',
           iconName: 'ShieldCheck',
           title: 'Domain Status Management',
+          image: domainTracker05Img,
           description:
             'Monitor important domain information and maintain organised portfolio records.',
           features: [
@@ -1519,6 +1603,7 @@ export const PRODUCT_PAGES = {
           number: '06',
           iconName: 'BarChart3',
           title: 'Dashboard & Reports',
+          image: domainTracker06Img,
           description: 'Review domain portfolio information through an organised dashboard.',
           features: [
             'Domain Portfolio Overview',
@@ -1563,7 +1648,7 @@ export const PRODUCT_PAGES = {
       ],
     },
     whyChoose: {
-      eyebrow: 'Why Choose Domain Tracker?',
+      eyebrow: 'Why Choose Our Product',
       heading: 'Smarter Domain Management Starts Here.',
       description:
         'Whether you manage a few domains or a larger digital portfolio, keeping track of important registration details is essential. Domain Tracker offers a structured environment to help you organise, monitor, and manage your domain assets.',
